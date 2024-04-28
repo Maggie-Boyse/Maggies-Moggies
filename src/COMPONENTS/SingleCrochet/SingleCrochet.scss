@@ -1,0 +1,48 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+
+.single {
+  font-family: "Quicksand";
+  &__span {
+    font-weight: 700;
+  }
+  &__slipknot-1 {
+    display: flex;
+    flex-direction: row;
+  }
+  &__text {
+    font-size: 2rem;
+    margin: 2rem;
+  }
+  &__image-1 {
+    width: 50%;
+    margin: 2rem;
+  }
+  &__slipknot-2 {
+    display: flex;
+    flex-direction: row;
+    background-color: $light-purple;
+  }
+  &__image-2 {
+    width: 50%;
+    margin: 2rem;
+  }
+  &__slipknot-3 {
+    display: flex;
+    flex-direction: row;
+    background-color: $lilac;
+  }
+  &__image-3 {
+    width: 50%;
+    margin: 2rem;
+  }
+  &__slipknot-4 {
+    display: flex;
+    flex-direction: row;
+    background-color: $medium-purple;
+  }
+  &__image-4 {
+    width: 50%;
+    margin: 2rem;
+  }
+}
