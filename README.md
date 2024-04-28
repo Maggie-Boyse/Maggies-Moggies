@@ -1,10 +1,11 @@
 ### Maggie's Notes ###
 For anyone interested, notes about the process, and decisions I've made
 The folders are all caps because this project is for me and that's how I like them ¯\_(ツ)_/¯
+The coulours are named for my own associations as they're styled out
 
 
 
-
+need a display patterns page
 
 
 
