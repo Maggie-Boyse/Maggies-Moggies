@@ -6,7 +6,7 @@ function Chaining() {
   return (
     <section className="chaining">
       <div className="chaining__slipknot-1">
-        <p>
+        <p className="chaining__text">
           {" "}
           To begin, we will hold our yarn at one end, in a loop. Make sure your
           tail is <span>behind</span>! See image one.

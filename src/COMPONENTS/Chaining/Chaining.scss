@@ -1,0 +1,8 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+
+.chaining {
+  &__image-one {
+    width: 33%;
+  }
+}
