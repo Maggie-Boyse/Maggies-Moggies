@@ -4,7 +4,7 @@ The folders are all caps because this project is for me and that's how I like th
 
 
 
-
+need a display patterns page
 
 
 
