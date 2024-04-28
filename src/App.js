@@ -1,17 +1,17 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Header from "./COMPONENTS/Header/Header";
-import Footer from "./COMPONENTS/Footer/Footer";
-import NavBar from "./COMPONENTS/NavBar/NavBar";
+import AboutPage from "./PAGES/AboutPage/AboutPage";
+import LearningPage from "./PAGES/LearningPage/LearningPage";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Header />
-        <NavBar />
-        <Footer />
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<AboutPage />} />
+        <Route path="/learn" element={<LearningPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
