@@ -1,5 +1,5 @@
 import "../Header/Header.scss";
-import logo from "../../assets/images/MM-logo.jpg";
+import logo from "../../assets/images/MM-logo.png";
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -25,4 +25,3 @@ function Header() {
 }
 
 export default Header;
-
