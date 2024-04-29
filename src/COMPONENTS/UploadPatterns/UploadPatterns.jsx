@@ -1,10 +1,10 @@
 import "../UploadPatterns/UploadPatterns.scss";
-    
+
 function UploadPatterns() {
   return (
-    <div className="">
-      <>UploadPatterns</>
-    </div>
+    <form>
+      <h2>Search and Upload Patterns</h2>
+    </form>
   );
 }
 

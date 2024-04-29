@@ -4,6 +4,7 @@ import placeholder from "../../assets/images/crochet-image-placeholder.jpg";
 function AboutSection() {
   return (
     <section className="about">
+      <h2 className="about__title">About the Site</h2>
       <div className="about__text-image">
         <p className="about__text">
           Claw your carpet in places everyone can see - why hide my amazing

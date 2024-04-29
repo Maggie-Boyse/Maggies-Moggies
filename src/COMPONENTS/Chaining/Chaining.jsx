@@ -5,6 +5,7 @@ import placeholder from "../../assets/images/crochet-image-placeholder.jpg";
 function Chaining() {
   return (
     <section className="chaining">
+      <h2 className="chaining__title">Slipknot & Chaining</h2>
       <div className="chaining__slipknot-1">
         <p className="chaining__text">
           {" "}

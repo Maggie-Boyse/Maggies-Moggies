@@ -3,6 +3,10 @@
 
 .about {
   font-family: "Quicksand";
+  &__title {
+    padding: 2rem 2rem 0rem 2rem;
+    font-size: 3rem;
+  }
   &__text-image {
     display: flex;
     flex-direction: row;
