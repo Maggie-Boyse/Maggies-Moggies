@@ -3,7 +3,6 @@ import "./App.css";
 import AboutPage from "./PAGES/AboutPage/AboutPage";
 import LearningPage from "./PAGES/LearningPage/LearningPage";
 
-
 function App() {
   return (
     <BrowserRouter>
