@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 
 function LearningNavBar() {
   return (
-    <div className="navbar">
-      <ul className="navbar__list">
-        <Link to="/learn" className="navbar__item">
+    <div className="learn-navbar">
+      <ul className="learn-navbar__list">
+        <Link to="/learn" className="learn-navbar__item">
           Slipknot & Chain
         </Link>
-        <Link to="/singlecrochet" className="navbar__item">
+        <Link to="/singlecrochet" className="learn-navbar__item">
           Single Crochet
         </Link>
-        <Link to="/doublecrochet" className="navbar__item">
+        <Link to="/doublecrochet" className="learn-navbar__item">
           Double Crochet
         </Link>
       </ul>

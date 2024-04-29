@@ -1,8 +1,9 @@
 @use "../../styles/partials/global" as *;
 @use "../../styles/partials/variables" as *;
 
-.navbar {
+.learn-navbar {
   font-family: "Quicksand";
+  background-color: $dark-purple;
   &__list {
     list-style: none;
     display: flex;
@@ -12,13 +13,13 @@
     text-decoration: none;
     color: black;
     width: 15.5rem;
-    margin: 0.5rem;
+    margin: 2rem 0.5rem;
     padding: 0.5rem;
     border-radius: 10px;
     font-size: 1.5rem;
     font-weight: 400;
     text-align: center;
-    background-color: $lilac;
-    box-shadow: 5px 5px 5px $dark-purple;
+    background-color: $light-purple;
+    box-shadow: 5px 5px 5px black;
   }
 }
