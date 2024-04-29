@@ -1,22 +1,20 @@
-import "../LearningPage/LearningPage.scss";
+import "../SingleCrochetPage/SingleCrochetPage.scss";
 import Header from "../../COMPONENTS/Header/Header";
 import NavBar from "../../COMPONENTS/NavBar/NavBar";
 import Footer from "../../COMPONENTS/Footer/Footer";
-import Chaining from "../../COMPONENTS/Chaining/Chaining";
-import DoubleCrochet from "../../COMPONENTS/DoubleCrochet/DoubleCrochet";
+import SingleCrochet from "../../COMPONENTS/SingleCrochet/SingleCrochet";
 import LearningNavBar from "../../COMPONENTS/LearningNavBar/LearningNavBar";
 
-function LearningPage() {
+function SingleCrochetPage() {
   return (
     <div>
       <Header />
       <NavBar />
       <LearningNavBar />
-      <Chaining />
-      <DoubleCrochet />
+      <SingleCrochet />
       <Footer />
     </div>
   );
 }
 
-export default LearningPage;
+export default SingleCrochetPage;

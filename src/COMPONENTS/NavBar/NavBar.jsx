@@ -11,9 +11,6 @@ function NavBar() {
         <Link to="/learn" className="navbar__item">
           Learn to Crochet
         </Link>
-        {/* <li className="navbar__item" component={Link} to="/learn">
-          Learn to Crochet
-        </li> */}
         <li className="navbar__item">Community Board</li>
         <li className="navbar__item">Search Patterns</li>
         {/* upload pattern modal or whatever, not new page */}
