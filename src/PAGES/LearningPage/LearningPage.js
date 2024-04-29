@@ -13,7 +13,6 @@ function LearningPage() {
       <NavBar />
       <LearningNavBar />
       <Chaining />
-      <DoubleCrochet />
       <Footer />
     </div>
   );

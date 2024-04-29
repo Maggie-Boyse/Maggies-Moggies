@@ -11,10 +11,16 @@ function NavBar() {
         <Link to="/learn" className="navbar__item">
           Learn to Crochet
         </Link>
-        <li className="navbar__item">Community Board</li>
-        <li className="navbar__item">Search Patterns</li>
+        <Link to="/community" className="navbar__item">
+          Community Board
+        </Link>
+        <Link to="/patterns" className="navbar__item">
+          Search Patterns
+        </Link>
+        {/* <Link to="/builder" className="navbar__item">
+          Pattern Builder
+        </Link> */}
         {/* upload pattern modal or whatever, not new page */}
-        {/* <li>Pattern Builder</li> */}
       </ul>
     </div>
   );
