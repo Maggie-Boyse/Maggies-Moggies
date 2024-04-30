@@ -2,5 +2,51 @@
 @use "../../styles/partials/variables" as *;
 
 .upload {
-  font-family: "Quicksand";
+  &__text {
+    font-size: 1.5rem;
+  }
+  &__form {
+    margin: 2rem;
+  }
+  &__text-button {
+    display: flex;
+    align-items: center;
+  }
+  &__input {
+    width: 48rem;
+    height: 12rem;
+    border-radius: 10px;
+    border-style: solid;
+    background-color: white;
+    box-shadow: 5px 5px 5px $dark-purple;
+    margin-right: 1rem;
+    &:focus {
+      border: solid 3px;
+      border-color: $medium-purple;
+      outline: none;
+    }
+  }
+  &__input::placeholder {
+    font-size: 1.3rem;
+    color: $medium-purple;
+    font-family: "Quicksand";
+  }
+  &__button {
+    margin: 0.5rem;
+    width: 12rem;
+    height: 3.4rem;
+    background-color: $plum;
+    border-color: $plum;
+    border: none;
+    color: white;
+    font-family: "Quicksand";
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px $dark-purple;
+    &:hover {
+      background-color: $dark-purple;
+    }
+  }
 }
