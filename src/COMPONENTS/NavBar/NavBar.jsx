@@ -11,7 +11,7 @@ function NavBar() {
         <Link to="/learn" className="navbar__item">
           Learn to Crochet
         </Link>
-        <Link to="/community" className="navbar__item">
+        <Link to="/communityboard" className="navbar__item">
           Community Board
         </Link>
         <Link to="/patterns" className="navbar__item">

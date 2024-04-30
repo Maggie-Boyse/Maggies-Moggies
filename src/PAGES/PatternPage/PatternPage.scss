@@ -1,0 +1,11 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+
+.patterns {
+  font-family: "Quicksand";
+  &__title {
+    margin: 2rem;
+    color: $dark-purple;
+    font-size: 3rem;
+  }
+}

@@ -2,9 +2,17 @@ import "../UploadPatterns/UploadPatterns.scss";
     
 function UploadPatterns() {
   return (
-    <div className="">
-      <>UploadPatterns</>
-    </div>
+    <section className="upload">
+      <div>
+        <form className="upload__form">
+          <p className="upload__text">
+            Or, upload your pattern here
+          </p>
+          <input className="upload__input"></input>
+          <button className="upload__button">upload</button>
+        </form>
+      </div>
+    </section>
   );
 }
 
