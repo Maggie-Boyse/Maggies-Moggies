@@ -10,6 +10,10 @@ function UploadPatterns() {
             <button className="upload__button">upload</button>
           </div>
           <input className="upload__input"></input>
+          <div className="upload__text-attach">
+            <p className="upload__text">Attach your photo here!</p>
+            <input type="file" className="upload__attach"></input>
+          </div>
         </form>
       </div>
     </section>
