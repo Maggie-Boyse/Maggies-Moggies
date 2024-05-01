@@ -1,0 +1,11 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+
+.board {
+  font-family: "Quicksand";
+  &__title {
+    padding: 2rem 2rem 0rem 2rem;
+    font-size: 3rem;
+    color: #5c1256;
+  }
+}

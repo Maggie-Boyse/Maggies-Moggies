@@ -50,7 +50,7 @@
       background-color: $dark-purple;
     }
   }
-  &__attach {
+  &__attach[type="file"]::file-selector-button {
     margin: 0.5rem;
     width: 12rem;
     height: 3.4rem;
@@ -64,6 +64,7 @@
     text-transform: uppercase;
     border-radius: 10px;
     box-shadow: 5px 5px 5px $dark-purple;
+    overflow: hidden;
     &:hover {
       background-color: $dark-purple;
     }

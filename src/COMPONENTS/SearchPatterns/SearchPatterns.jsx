@@ -5,9 +5,9 @@ function SearchPatterns() {
     <section className="search">
       <div>
         <form className="search__form">
-          <p className="search__text">
+          <label className="search__text" htmlFor="search__input">
             Simultaneously search Ravelry and Maggie's Moggies for patterns!
-          </p>
+          </label>
           <div className="search__input-button">
             <input
               className="search__input"
