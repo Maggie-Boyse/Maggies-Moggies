@@ -4,30 +4,38 @@ import axios from "axios";
 import { API_URL } from "../../utils/api";
 
 function UploadPost() {
-  // const [username, setUsername] = useState("");
+  const [userId, setUserId] = useState("");
   const [postBody, setPostBody] = useState("");
-  // const handleUsernameChange = (e) => {
-  //   setUsername(e.target.value);
-  // };
-  // onChange={handleUsernameChange}
+
+  const handleUserIdChange = (e) => {
+    setUserId(e.target.value);
+  };
+
   const handlePostBodyChange = (e) => {
     setPostBody(e.target.value);
   };
+
   const handleSubmitForm = async (e) => {
     e.preventDefault();
-    const newPost = { post_body: postBody };
+    const newPost = { post_body: postBody, user_id: userId };
     await axios.post(`${API_URL}/posts`, newPost);
   };
   return (
-    <form className="upload__form" onSubmit={handleSubmitForm}>
-      <div className="upload__text-button">
-        <p className="upload__text">Add your own post here!</p>
-        <input className="upload__name" ></input>
-        <input className="upload__body" onChange={handlePostBodyChange}></input>
-        <button className="upload__button" type="submit">
-          upload
-        </button>
-      </div>
+    <form className="upload-form" onSubmit={handleSubmitForm}>
+      <h3 className="upload-form__title">Add your own post here!</h3>
+      <label htmlFor="upload-form__name">user id</label>
+      <input
+        className="upload-form__name"
+        onChange={handleUserIdChange}
+      ></input>
+      <label htmlFor="upload-form__body">post body</label>
+      <input
+        className="upload-form__body"
+        onChange={handlePostBodyChange}
+      ></input>
+      <button className="upload-form__button" type="submit">
+        upload
+      </button>
     </form>
   );
 }

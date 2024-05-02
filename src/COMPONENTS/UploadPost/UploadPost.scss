@@ -1,16 +1,13 @@
 @use "../../styles/partials/global" as *;
 @use "../../styles/partials/variables" as *;
 
-.upload {
-  &__text {
+.upload-form {
+  font-family: "Quicksand";
+  &__title {
     font-size: 1.5rem;
   }
   &__form {
     margin: 2rem;
-  }
-  &__text-button {
-    display: flex;
-    align-items: center;
   }
   &__input {
     width: 48rem;

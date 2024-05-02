@@ -15,7 +15,7 @@ function NavBar() {
           Community Board
         </Link>
         <Link to="/patterns" className="navbar__item">
-          Search Patterns
+          Patterns
         </Link>
         {/* <Link to="/builder" className="navbar__item">
           Pattern Builder
