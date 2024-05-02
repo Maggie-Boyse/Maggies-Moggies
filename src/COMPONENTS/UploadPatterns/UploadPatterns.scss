@@ -2,17 +2,40 @@
 @use "../../styles/partials/variables" as *;
 
 .upload {
-  &__text {
-    font-size: 1.5rem;
+  &__title {
+    font-size: 2rem;
+    color: $dark-purple;
   }
   &__form {
     margin: 2rem;
   }
-  &__text-button {
-    display: flex;
-    align-items: center;
+  &__pattern-label {
+    font-size: 1.5rem;
   }
-  &__input {
+  &__label-name {
+    display: flex;
+    flex-direction: column;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+  &__pattern-name {
+    width: 48rem;
+    height: 2rem;
+    border-radius: 10px;
+    border-style: solid;
+    background-color: white;
+    box-shadow: 5px 5px 5px $dark-purple;
+    margin-right: 1rem;
+    font-size: 1.3rem;
+    &:focus {
+      border: solid 3px;
+      border-color: $medium-purple;
+      outline: none;
+    }
+  }
+  &__pattern-body {
     width: 48rem;
     height: 12rem;
     border-radius: 10px;
@@ -27,7 +50,7 @@
       outline: none;
     }
   }
-  &__input::placeholder {
+  &__pattern-body::placeholder {
     font-size: 1.3rem;
     color: $medium-purple;
     font-family: "Quicksand";

@@ -13,7 +13,6 @@ function CommBoard() {
     const postsReq = await axios.get(`${API_URL}/posts`);
     const postsData = postsReq.data;
     setPostsData(postsData);
-    // console.log(postsData);
   };
   useEffect(() => {
     fetchPosts();
