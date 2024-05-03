@@ -4,6 +4,7 @@ import placeholder from "../../assets/images/crochet-image-placeholder.jpg";
 function SingleCrochet() {
   return (
     <section className="single">
+      <h2 className="single__title">Single Crochet</h2>
       <div className="single__slipknot-1">
         <p className="single__text">
           Cat ipsum dolor sit amet, lick face hiss at owner, pee a lot, and meow

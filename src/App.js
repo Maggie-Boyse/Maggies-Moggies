@@ -4,6 +4,9 @@ import AboutPage from "./PAGES/AboutPage/AboutPage";
 import LearningPage from "./PAGES/LearningPage/LearningPage";
 import SingleCrochetPage from "./PAGES/SingleCrochetPage/SingleCrochetPage";
 import DoubleCrochetPage from "./PAGES/DoubleCrochetPage/DoubleCrochetPage";
+import PatternPage from "./PAGES/PatternPage/PatternPage";
+import UploadPatternPage from "./PAGES/UploadPatternPage/UploadPatternPage";
+import CommunityBoard from "./PAGES/CommunityBoard/CommunityBoard";
 
 function App() {
   return (
@@ -13,6 +16,9 @@ function App() {
         <Route path="/learn" element={<LearningPage />} />
         <Route path="/singlecrochet" element={<SingleCrochetPage />} />
         <Route path="/doublecrochet" element={<DoubleCrochetPage />} />
+        <Route path="/patterns" element={<PatternPage />} />
+        <Route path="/upload" element={<UploadPatternPage />} />
+        <Route path="/communityboard" element={<CommunityBoard />} />
       </Routes>
     </BrowserRouter>
   );

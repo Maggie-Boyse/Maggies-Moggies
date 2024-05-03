@@ -1,20 +1,17 @@
 @use "../../styles/partials/global" as *;
 @use "../../styles/partials/variables" as *;
 
-.search {
-  &__text {
+.upload-form {
+  font-family: "Quicksand";
+  &__title {
     font-size: 1.5rem;
   }
   &__form {
     margin: 2rem;
   }
-  &__input-button {
-    display: flex;
-    align-items: center;
-  }
   &__input {
-    width: 36rem;
-    height: 3rem;
+    width: 48rem;
+    height: 12rem;
     border-radius: 10px;
     border-style: solid;
     background-color: white;

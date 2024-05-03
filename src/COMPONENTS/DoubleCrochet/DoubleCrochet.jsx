@@ -4,6 +4,7 @@ import placeholder from "../../assets/images/crochet-image-placeholder.jpg";
 function DoubleCrochet() {
   return (
     <section className="double">
+      <h2 className="double__title">Double Crochet</h2>
       <div className="double__slipknot-1">
         <p className="double__text">
           Cat ipsum dolor sit amet, lick face hiss at owner, pee a lot, and meow
