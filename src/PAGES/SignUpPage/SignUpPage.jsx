@@ -10,8 +10,8 @@ function AboutPage() {
     <div className="aboutpage">
       <Header />
       <NavBar />
-      <SignUp />
       <SignIn />
+      <SignUp />
       <Footer />
     </div>
   );

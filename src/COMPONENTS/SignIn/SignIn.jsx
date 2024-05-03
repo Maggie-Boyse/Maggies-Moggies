@@ -1,5 +1,6 @@
+import "../SignIn/SignIn.scss";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
   const [username, setUsername] = useState("");
@@ -33,17 +34,21 @@ const SignIn = () => {
   };
 
   return (
-    <form className="signin-form" >
+    <form className="signin-form">
       <h3 className="signin-form__title">Sign In</h3>
-      <label htmlFor="signin-form__username">username</label>
+      <label htmlFor="signin-form__username" className="signin-form__label">
+        username
+      </label>
       <input
-        className="signin-form__username"
+        className="signin-form__input"
         value={username}
         onChange={handleUsernameChange}
       ></input>
-      <label htmlFor="signin-form__password">password</label>
+      <label htmlFor="signin-form__password" className="signin-form__label">
+        password
+      </label>
       <input
-        className="signin-form__password"
+        className="signin-form__input"
         value={password}
         onChange={handlePasswordChange}
       ></input>

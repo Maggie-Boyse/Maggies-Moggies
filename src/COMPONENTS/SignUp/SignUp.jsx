@@ -25,21 +25,27 @@ function SignUp() {
   return (
     <form className="signup-form">
       <h3 className="signup-form__title">Sign Up</h3>
-      <label htmlFor="signup-form__email">email</label>
+      <label htmlFor="signup-form__email" className="signup-form__label">
+        email
+      </label>
       <input
-        className="signup-form__email"
+        className="signup-form__input"
         value={email}
         onChange={onEmailChange}
       ></input>
-      <label htmlFor="signup-form__username">username</label>
+      <label htmlFor="signup-form__username" className="signup-form__label">
+        username
+      </label>
       <input
-        className="signup-form__username"
+        className="signup-form__input"
         value={username}
         onChange={onUsernameChange}
       ></input>
-      <label htmlFor="signup-form__password">password</label>
+      <label htmlFor="signup-form__password" className="signup-form__label">
+        password
+      </label>
       <input
-        className="signup-form__password"
+        className="signup-form__input"
         value={password}
         onChange={onPasswordChange}
       ></input>
