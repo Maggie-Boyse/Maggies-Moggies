@@ -7,6 +7,7 @@ import DoubleCrochetPage from "./PAGES/DoubleCrochetPage/DoubleCrochetPage";
 import PatternPage from "./PAGES/PatternPage/PatternPage";
 import UploadPatternPage from "./PAGES/UploadPatternPage/UploadPatternPage";
 import CommunityBoard from "./PAGES/CommunityBoard/CommunityBoard";
+import SignUpPage from "./PAGES/SignUpPage/SignUpPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/patterns" element={<PatternPage />} />
         <Route path="/upload" element={<UploadPatternPage />} />
         <Route path="/communityboard" element={<CommunityBoard />} />
+        <Route path="/signup" element={<SignUpPage />} />
       </Routes>
     </BrowserRouter>
   );

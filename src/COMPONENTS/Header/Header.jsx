@@ -17,8 +17,12 @@ function Header() {
         <h1 className="header__title">Maggie's Moggies</h1>
       </div>
       <div className="header__signs">
-        <button className="header__sign-in">Sign In</button>
-        <button className="header__sign-up">Sign Up</button>
+        <Link to="/signup">
+          <button className="header__sign-in">Sign In</button>
+        </Link>
+        <Link to="/signup">
+          <button className="header__sign-up">Sign Up</button>
+        </Link>
       </div>
     </header>
   );
