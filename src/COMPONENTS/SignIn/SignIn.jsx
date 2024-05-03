@@ -27,7 +27,7 @@ const SignIn = () => {
 
     if (loginRes.status === 200) {
       localStorage.setItem("authToken", loginRes.data.token);
-      navigate("/profile");
+      navigate("/signup");
     } else {
       // Handle login error
     }

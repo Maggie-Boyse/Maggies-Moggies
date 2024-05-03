@@ -1,6 +1,8 @@
 import "../SignUp/SignUp.scss";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { API_URL } from "../../utils/api";
 
 function SignUp() {
   const [email, setEmail] = useState("");
@@ -14,12 +16,14 @@ function SignUp() {
 
   const handleSignup = async (e) => {
     e.preventDefault();
+    // const newUser = { email: email, username: username, password: password };
+    // await axios.post(`${API_URL}/users`, newUser);
 
     const signupRes = {
       status: 200,
     };
     if (signupRes === 200) {
-      navigate("/login");
+      navigate("/signup");
     }
   };
   return (
