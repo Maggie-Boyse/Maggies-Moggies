@@ -35,7 +35,7 @@ function PatternPage() {
       <NavBar />
       <h1 className="patterns__title">Search and Upload Patterns</h1>
       <SearchPatterns />
-      <Link to="/upload" className="patterns__item">
+      <Link to="/upload" className="patterns__upload">
         Upload Here{" "}
       </Link>
 

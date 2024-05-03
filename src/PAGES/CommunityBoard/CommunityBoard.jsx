@@ -10,8 +10,8 @@ function CommunityBoard() {
     <div>
       <Header />
       <NavBar />
-      <UploadPost />
       <CommBoard />
+      <UploadPost />
       <Footer />
     </div>
   );

@@ -1,6 +1,8 @@
 import "../SignIn/SignIn.scss";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../../utils/api";
+import axios from "axios";
 
 const SignIn = () => {
   const [username, setUsername] = useState("");
@@ -13,21 +15,16 @@ const SignIn = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    // const loginRes = await axios.post("some_backend_server/login", {
-    //   username,
-    //   password,
-    // });
-    const loginRes = {
-      status: 200,
-      data: {
-        token:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6ImtldmluIiwiaWF0IjoxNTE2MjM5MDIyfQ.c_VbOvn5RyeQpEC5Tnk-V2aT2dy4T8fgArO_P7-8jjI",
-      },
-    };
+    const loginRes = await axios.post(`${API_URL}/users/login`, {
+      username,
+      password,
+    });
 
     if (loginRes.status === 200) {
       localStorage.setItem("authToken", loginRes.data.token);
-      navigate("/signup");
+      localStorage.setItem("username", loginRes.data.username);
+
+      navigate("/");
     } else {
       // Handle login error
     }

@@ -1,16 +1,41 @@
 @use "../../styles/partials/global" as *;
 @use "../../styles/partials/variables" as *;
 
-.upload-form {
+.upload-post {
   font-family: "Quicksand";
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
   &__title {
+    font-size: 2rem;
+    color: $dark-purple;
+  }
+  &__label {
     font-size: 1.5rem;
+    margin-top: 1rem;
   }
-  &__form {
-    margin: 2rem;
+  &__name {
+    width: 20rem;
+    height: 3rem;
+    border-radius: 10px;
+    border-style: solid;
+    background-color: white;
+    box-shadow: 5px 5px 5px $dark-purple;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    &:focus {
+      border: solid 3px;
+      border-color: $medium-purple;
+      outline: none;
+    }
   }
-  &__input {
-    width: 48rem;
+  &__input::placeholder {
+    font-size: 1.3rem;
+    color: $medium-purple;
+    font-family: "Quicksand";
+  }
+  &__body {
+    width: 20rem;
     height: 12rem;
     border-radius: 10px;
     border-style: solid;
@@ -18,6 +43,7 @@
     box-shadow: 5px 5px 5px $dark-purple;
     margin-right: 1rem;
     font-size: 1.3rem;
+    margin-top: 1rem;
     &:focus {
       border: solid 3px;
       border-color: $medium-purple;
@@ -30,7 +56,6 @@
     font-family: "Quicksand";
   }
   &__button {
-    margin: 0.5rem;
     width: 12rem;
     height: 3.4rem;
     background-color: $plum;
@@ -43,6 +68,7 @@
     text-transform: uppercase;
     border-radius: 10px;
     box-shadow: 5px 5px 5px $dark-purple;
+    margin-top: 1rem;
     &:hover {
       background-color: $dark-purple;
     }

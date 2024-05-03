@@ -7,6 +7,12 @@ function UploadPatterns() {
   const [patternTitle, setPatternTitle] = useState("");
   const [patternBody, setPatternBody] = useState("");
   const [patternImage, setPatternImage] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  // const formEl = e.target;
+
+  //   const titleVal = formEl.patternTitle.value;
+  //   const patternVal = formEl.patternBody.value;
+  //   const imageVal = formEl.patternImage.value;
 
   const handlePatternTitleChange = (e) => {
     setPatternTitle(e.target.value);
@@ -15,8 +21,17 @@ function UploadPatterns() {
     setPatternBody(e.target.value);
   };
   const handlePatternImageChange = (e) => {
-    setPatternImage(e.target.value);
+    console.log(e.target);
+    console.log(e.target.value);
+    console.log(e.target.files);
+
+    setPatternImage(e.target.files[0]);
   };
+  // if (titleVal === "" || patternVal === "" || imageVal === " ") {
+  //   alert("Please fill out all the fields");
+  //   return;
+  // }
+
   const handleSubmitForm = async (e) => {
     e.preventDefault();
     const newPattern = {
@@ -25,6 +40,12 @@ function UploadPatterns() {
       pattern_image: patternImage,
     };
     await axios.post(`${API_URL}/patterns`, newPattern);
+    setShowModal(true);
+  };
+
+  const closeModal = (e) => {
+    e.preventDefault();
+    setShowModal(false);
   };
 
   return (
@@ -63,6 +84,21 @@ function UploadPatterns() {
       <button className="upload-pattern__button" type="submit">
         upload
       </button>
+
+      {showModal && (
+        <div className="upload-pattern__modal">
+          <div className="upload-pattern__modal-content">
+            <button
+              onClick={closeModal}
+              className="upload-pattern__modal-close"
+            >
+              {" "}
+              close{" "}
+            </button>
+            <p>Upload Successful!</p>
+          </div>
+        </div>
+      )}
     </form>
   );
 }

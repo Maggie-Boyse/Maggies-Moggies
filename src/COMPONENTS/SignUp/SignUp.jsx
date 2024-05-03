@@ -16,15 +16,15 @@ function SignUp() {
 
   const handleSignup = async (e) => {
     e.preventDefault();
-    // const newUser = { email: email, username: username, password: password };
-    // await axios.post(`${API_URL}/users`, newUser);
+    const newUser = { email: email, username: username, password: password };
+    const signupRes = await axios.post(`${API_URL}/users`, newUser);
 
-    const signupRes = {
-      status: 200,
-    };
-    if (signupRes === 200) {
-      navigate("/signup");
+    if (signupRes.status === 200) {
+      localStorage.setItem("authToken", signupRes.data.token);
+      localStorage.setItem("username", signupRes.data.username);
+      navigate("/");
     }
+    /////// alert here?
   };
   return (
     <form className="signup-form">
