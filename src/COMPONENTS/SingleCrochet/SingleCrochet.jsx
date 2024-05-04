@@ -7,13 +7,10 @@ function SingleCrochet() {
       <h2 className="single__title">Single Crochet</h2>
       <div className="single__slipknot-1">
         <p className="single__text">
-          Cat ipsum dolor sit amet, lick face hiss at owner, pee a lot, and meow
-          repeatedly scratch at fence purrrrrr eat muffins and poutine until
-          owner comes back so fight own tail or jump on human and sleep on her
-          all night long be long in the bed, purr in the morning and then give a
-          bite to every human around for not waking up request food, purr loud
-          scratch the walls.
-          <span className="single__span"></span>
+          For simplicity's sake, we will start with the chain we made in in the
+          first step. Firstly, we can see each stitch down the chain we made.
+          Make sure you're on the front of the chain! For a single crochet, we
+          will start by inserting our hook into the second chain from the hook.
         </p>
         <img
           src={placeholder}
@@ -33,22 +30,16 @@ function SingleCrochet() {
           // replace with proper class name later
         />
         <p className="single__text">
-          so play with it until it dies of shock so scoot butt on the rug yet
-          meow. Stare out the window. Kick up litter cats are fats i like to
-          pets them they like to meow back yet small kitty warm kitty little
-          balls of fur. Tweeting a baseball. Play time gnaw the corn cob make
-          muffins, so to pet a cat, rub its belly,
+          Next, we will grab our yarn, and pull back through the same stitch we
+          entered. We will now have <span className="single__span">two</span>{" "}
+          loops on our hook.
         </p>
       </div>
 
       <div className="single__slipknot-3">
         <p className="single__text">
-          endure blood and agony, quietly weep, keep rubbing belly kitty, and
-          vommit food and eat it again. Mess up all the toilet paper chew on
-          cable for climb a tree, wait for a fireman jump to fireman then
-          scratch his face i love cats i am one wake up scratch humans leg for
-          food then purr then i have a and relax for roll on the floor purring
-          your whiskers off
+          Now, grab the trailing yarn once more, and pull through both loops.
+          That's a single crochet!
         </p>
         <img
           src={placeholder}
@@ -68,11 +59,12 @@ function SingleCrochet() {
           // replace with proper class name later
         />
         <p className="single__text">
-          cuddle no cuddle cuddle love scratch scratch ha ha, you're funny i'll
-          kill you last. Use lap as chair meoooow. Missing until dinner time
-          thinking longingly about tuna brine. Hopped up on catnip carefully
-          drink from water glass and then spill it everywhere and proceed to
-          lick the puddle or catch small lizards,{" "}
+          We'll continue this pattern all down the row. But now what? Back to
+          chaining! We'll "chain one" - this is called a turning chain, and the{" "}
+          <span className="single__span">turn</span>
+          our work around to face the other way. Our previous stitches from the
+          last row now form somewhat of a "V" shape. From now on, we'll insert
+          our hook here, through the "V".
         </p>
       </div>
     </section>
