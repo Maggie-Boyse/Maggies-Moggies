@@ -1,8 +1,21 @@
 import "../Header/Header.scss";
 import logo from "../../assets/images/MM-logo.png";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+// import { API_URL } from "../../utils/api";
+// import axios from "axios";
 
 function Header() {
+  const [userHeader, setUserHeader] = useState();
+  const navigate = useNavigate();
+
+  const authToken = localStorage.getItem("authToken");
+  if (authToken === null) {
+    return navigate("/");
+  } if authToken 
+  
+  // localStorage.getItem("username", loginRes.data.username);
 
   // fetch auth token from local Storage
   // if auth token exists, decode
