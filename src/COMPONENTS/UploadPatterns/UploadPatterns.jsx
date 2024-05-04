@@ -8,11 +8,6 @@ function UploadPatterns() {
   const [patternBody, setPatternBody] = useState("");
   const [patternImage, setPatternImage] = useState("");
   const [showModal, setShowModal] = useState(false);
-  // const formEl = e.target;
-
-  //   const titleVal = formEl.patternTitle.value;
-  //   const patternVal = formEl.patternBody.value;
-  //   const imageVal = formEl.patternImage.value;
 
   const handlePatternTitleChange = (e) => {
     setPatternTitle(e.target.value);
@@ -27,10 +22,6 @@ function UploadPatterns() {
 
     setPatternImage(e.target.files[0]);
   };
-  // if (titleVal === "" || patternVal === "" || imageVal === " ") {
-  //   alert("Please fill out all the fields");
-  //   return;
-  // }
 
   const handleSubmitForm = async (e) => {
     e.preventDefault();

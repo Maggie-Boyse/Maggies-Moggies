@@ -8,6 +8,7 @@ function SignUp() {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
   const onEmailChange = (e) => setEmail(e.target.value);
@@ -22,9 +23,14 @@ function SignUp() {
     if (signupRes.status === 200) {
       localStorage.setItem("authToken", signupRes.data.token);
       localStorage.setItem("username", signupRes.data.username);
+      setShowModal(true);
       navigate("/");
+    } else {
     }
-    /////// alert here?
+  };
+  const closeModal = (e) => {
+    e.preventDefault();
+    setShowModal(false);
   };
   return (
     <form className="signup-form">
@@ -60,6 +66,19 @@ function SignUp() {
       >
         signup
       </button>
+
+      {showModal && (
+        <div className="signup-form__modal">
+          <div className="signup-form__modal-content">
+            <button onClick={closeModal} className="signup-form__modal-close">
+              {" "}
+              close{" "}
+            </button>
+            <p>Sign up Successful!</p>
+            <p> Welcome {username}</p>
+          </div>
+        </div>
+      )}
     </form>
   );
 }

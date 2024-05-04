@@ -46,4 +46,40 @@
       background-color: $dark-purple;
     }
   }
+  &__modal {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: $light-purple;
+    background-color: #5c125656; /* Black w/ opacity */
+  }
+  &__modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  &__button {
+    margin: 0.5rem;
+    width: 12rem;
+    height: 3.4rem;
+    background-color: $plum;
+    border-color: $plum;
+    border: none;
+    color: white;
+    font-family: "Quicksand";
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px $dark-purple;
+    &:hover {
+      background-color: $dark-purple;
+    }
+  }
 }
