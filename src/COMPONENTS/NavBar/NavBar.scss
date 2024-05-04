@@ -3,16 +3,20 @@
 
 .navbar {
   font-family: "Quicksand";
+  background-image: linear-gradient($plum, $light-purple);
+  outline: 0;
   &__list {
     list-style: none;
     display: flex;
     justify-content: center;
+    margin-top: 0px;
+    padding: 0.5rem;
   }
   &__item {
     text-decoration: none;
     color: black;
     width: 15.5rem;
-    margin: 0.5rem;
+    margin: 0rem 0.5rem 0.5rem 2rem;
     padding: 0.5rem;
     border-radius: 10px;
     font-size: 1.5rem;
