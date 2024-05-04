@@ -3,22 +3,29 @@
 
 .about {
   font-family: "Quicksand";
-  &__title {
-    padding: 2rem 2rem 0rem 2rem;
+  &__hero {
     font-size: 3rem;
     color: $dark-purple;
+    padding: 0rem 0rem 25rem 0rem;
+    background-image: url("../../assets/images/hero-image-2.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 1rem;
   }
-  &__text-image {
-    display: flex;
-    flex-direction: row;
+  &__title-text {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: white;
   }
   &__text {
-    font-size: 1.25rem;
-    margin: 2rem;
-  }
-  &__image-1 {
-    width: 50%;
-    margin: 2rem;
-    border-radius: 20px;
+    width: 75%;
+    font-size: 1.5rem;
+    padding: 2rem;
+    margin: auto;
+    background-color: #b98ab4a4;
+    border-radius: 10px;
+    position: relative;
+    bottom: 10rem;
   }
 }

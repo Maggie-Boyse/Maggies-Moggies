@@ -7,12 +7,11 @@ function DoubleCrochet() {
       <h2 className="double__title">Double Crochet</h2>
       <div className="double__slipknot-1">
         <p className="double__text">
-          Cat ipsum dolor sit amet, lick face hiss at owner, pee a lot, and meow
-          repeatedly scratch at fence purrrrrr eat muffins and poutine until
-          owner comes back so fight own tail or jump on human and sleep on her
-          all night long be long in the bed, purr in the morning and then give a
-          bite to every human around for not waking up request food, purr loud
-          scratch the walls.
+          Continuing forward, we will build on the previous row of single
+          crochets. Considering that a double crochet will be "taller" than a
+          single crochet, we want to start by chaining 2-3, depending on how
+          loose or firm we want our turning chain to be. If starting with a
+          foundation chain, we would start on the third chain from the hook.
           <span className="double__span"></span>
         </p>
         <img
@@ -33,22 +32,19 @@ function DoubleCrochet() {
           // replace with proper class name later
         />
         <p className="double__text">
-          so play with it until it dies of shock so scoot butt on the rug yet
-          meow. Stare out the window. Kick up litter cats are fats i like to
-          pets them they like to meow back yet small kitty warm kitty little
-          balls of fur. Tweeting a baseball. Play time gnaw the corn cob make
-          muffins, so to pet a cat, rub its belly,
+          For the stitch itself, we will start by looping our yarn over the hook
+          <span className="double__span">before</span> passing through the
+          stitch. The next part is the same as single crochet, grab the yarn and
+          pull it through. We will now have{" "}
+          <span className="double__span">three</span> loops on our hook.
         </p>
       </div>
 
       <div className="double__slipknot-3">
         <p className="double__text">
-          endure blood and agony, quietly weep, keep rubbing belly kitty, and
-          vommit food and eat it again. Mess up all the toilet paper chew on
-          cable for climb a tree, wait for a fireman jump to fireman then
-          scratch his face i love cats i am one wake up scratch humans leg for
-          food then purr then i have a and relax for roll on the floor purring
-          your whiskers off
+          Next, grab the yarn again and pull through{" "}
+          <span className="double__span">two</span> loops. There should still be
+          two loops left on the hook.
         </p>
         <img
           src={placeholder}
@@ -68,11 +64,8 @@ function DoubleCrochet() {
           // replace with proper class name later
         />
         <p className="double__text">
-          cuddle no cuddle cuddle love scratch scratch ha ha, you're funny i'll
-          kill you last. Use lap as chair meoooow. Missing until dinner time
-          thinking longingly about tuna brine. Hopped up on catnip carefully
-          drink from water glass and then spill it everywhere and proceed to
-          lick the puddle or catch small lizards,{" "}
+          Repeat the last step once more - grabbing the yarn and pulling through
+          two loops. That's a double crochet!
         </p>
       </div>
     </section>

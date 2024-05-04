@@ -6,7 +6,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: $lilac;
+  background-image: linear-gradient($light-purple, $plum);
+  outline: 0;
   &__logo-title {
     display: flex;
     flex-direction: row;
