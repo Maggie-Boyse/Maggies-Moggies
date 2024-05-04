@@ -42,6 +42,7 @@ function SignUp() {
         className="signup-form__input"
         value={email}
         onChange={onEmailChange}
+        required
       ></input>
       <label htmlFor="signup-form__username" className="signup-form__label">
         username
@@ -50,6 +51,7 @@ function SignUp() {
         className="signup-form__input"
         value={username}
         onChange={onUsernameChange}
+        required
       ></input>
       <label htmlFor="signup-form__password" className="signup-form__label">
         password
@@ -58,6 +60,7 @@ function SignUp() {
         className="signup-form__input"
         value={password}
         onChange={onPasswordChange}
+        required
       ></input>
       <button
         className="signup-form__button"

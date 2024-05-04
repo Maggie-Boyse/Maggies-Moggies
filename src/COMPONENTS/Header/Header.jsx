@@ -2,20 +2,29 @@ import "../Header/Header.scss";
 import logo from "../../assets/images/MM-logo.png";
 import { Link } from "react-router-dom";
 // import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-// import { API_URL } from "../../utils/api";
-// import axios from "axios";
+// import { jwtDecode } from "jwt-decode";
 
 function Header() {
-  // const [userHeader, setUserHeader] = useState();
-  // const navigate = useNavigate();
+  // const [userHeader, setUserHeader] = useState(false);
+  // const [header, setHeader] = useState(Boolean);
+
+  // const username = localStorage.getItem("username");
+  // // const navigate = useNavigate();
 
   // const authToken = localStorage.getItem("authToken");
-  // if (authToken === null) {
-  //   return navigate("/");
-  // } if authToken 
-  
-  // localStorage.getItem("username", loginRes.data.username);
+  // const decoded = jwtDecode(authToken);
+  // console.log(decoded);
+  // if (localStorage.getItem("authToken") === null) {
+  //   setHeader(true);
+
+  //   if (decoded.exp * 1000 < new Date().getTime()) {
+  //     localStorage.clear();
+  //     console.log("Time Expired");
+  //     setHeader(true);
+  //   } else {
+  //     setHeader(false);
+  //     setUserHeader(true);
+  //   }
 
   // fetch auth token from local Storage
   // if auth token exists, decode
@@ -36,7 +45,7 @@ function Header() {
         </Link>
         <h1 className="header__title">Maggie's Moggies</h1>
       </div>
-
+      {/* {header && ( */}
       <div className="header__signs">
         <Link to="/signup">
           <button className="header__sign-in">Sign In</button>
@@ -45,9 +54,15 @@ function Header() {
           <button className="header__sign-up">Sign Up</button>
         </Link>
       </div>
-
+      {/* )}
+        {userHeader && (
+          <div className="user-header__user">
+            <p>Welcome {username}</p>
+          </div>
+        )} */}
     </header>
   );
 }
+// }
 
 export default Header;

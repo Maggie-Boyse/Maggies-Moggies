@@ -45,6 +45,7 @@ const SignIn = () => {
         className="signin-form__input"
         value={username}
         onChange={handleUsernameChange}
+        required
       ></input>
       <label htmlFor="signin-form__password" className="signin-form__label">
         password
@@ -53,6 +54,7 @@ const SignIn = () => {
         className="signin-form__input"
         value={password}
         onChange={handlePasswordChange}
+        required
       ></input>
       <button
         className="signin-form__button"

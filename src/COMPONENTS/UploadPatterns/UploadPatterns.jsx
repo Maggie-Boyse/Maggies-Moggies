@@ -53,6 +53,7 @@ function UploadPatterns() {
         <input
           className="upload-pattern__name"
           onChange={handlePatternTitleChange}
+          required
         ></input>
       </div>
       <div className="upload-pattern__label-body">
@@ -62,6 +63,7 @@ function UploadPatterns() {
         <input
           className="upload-pattern__body"
           onChange={handlePatternBodyChange}
+          required
         ></input>
       </div>
       <div className="upload-pattern__label-image">
