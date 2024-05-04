@@ -21,20 +21,24 @@ function UploadPost() {
     await axios.post(`${API_URL}/posts`, newPost);
   };
   return (
-    <form className="upload-form" onSubmit={handleSubmitForm}>
-      <h3 className="upload-form__title">Add your own post here!</h3>
-      <label htmlFor="upload-form__name">user id</label>
+    <form className="upload-post" onSubmit={handleSubmitForm}>
+      <h3 className="upload-post__title">Add your own post here!</h3>
+      <label htmlFor="upload-post__name" className="upload-post__label">
+        user id
+      </label>
       <input
-        className="upload-form__name"
+        className="upload-post__name"
         onChange={handleUserIdChange}
       ></input>
-      <label htmlFor="upload-form__body">post body</label>
+      <label htmlFor="upload-post__body" className="upload-post__label">
+        post body
+      </label>
       <input
-        className="upload-form__body"
+        className="upload-post__body"
         onChange={handlePostBodyChange}
       ></input>
-      <button className="upload-form__button" type="submit">
-        upload
+      <button className="upload-post__button" type="submit">
+        post
       </button>
     </form>
   );

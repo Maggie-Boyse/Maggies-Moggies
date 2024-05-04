@@ -16,7 +16,6 @@ function SearchPatterns() {
             <button className="search__button">search</button>
           </div>
         </form>
-        {/* <div className="pattern-return"></div> */}
       </div>
     </section>
   );

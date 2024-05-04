@@ -3,6 +3,13 @@ import logo from "../../assets/images/MM-logo.png";
 import { Link } from "react-router-dom";
 
 function Header() {
+
+  // fetch auth token from local Storage
+  // if auth token exists, decode
+  // check expiration of auth token
+  // if expired, delete auth token and username from localStorage
+  // else, show username in header
+
   return (
     <header className="header">
       <div className="header__logo-title">
@@ -16,10 +23,16 @@ function Header() {
         </Link>
         <h1 className="header__title">Maggie's Moggies</h1>
       </div>
+
       <div className="header__signs">
-        <button className="header__sign-in">Sign In</button>
-        <button className="header__sign-up">Sign Up</button>
+        <Link to="/signup">
+          <button className="header__sign-in">Sign In</button>
+        </Link>
+        <Link to="/signup">
+          <button className="header__sign-up">Sign Up</button>
+        </Link>
       </div>
+
     </header>
   );
 }

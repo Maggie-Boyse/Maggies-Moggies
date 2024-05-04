@@ -7,6 +7,12 @@ function UploadPatterns() {
   const [patternTitle, setPatternTitle] = useState("");
   const [patternBody, setPatternBody] = useState("");
   const [patternImage, setPatternImage] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  // const formEl = e.target;
+
+  //   const titleVal = formEl.patternTitle.value;
+  //   const patternVal = formEl.patternBody.value;
+  //   const imageVal = formEl.patternImage.value;
 
   const handlePatternTitleChange = (e) => {
     setPatternTitle(e.target.value);
@@ -15,8 +21,17 @@ function UploadPatterns() {
     setPatternBody(e.target.value);
   };
   const handlePatternImageChange = (e) => {
-    setPatternImage(e.target.value);
+    console.log(e.target);
+    console.log(e.target.value);
+    console.log(e.target.files);
+
+    setPatternImage(e.target.files[0]);
   };
+  // if (titleVal === "" || patternVal === "" || imageVal === " ") {
+  //   alert("Please fill out all the fields");
+  //   return;
+  // }
+
   const handleSubmitForm = async (e) => {
     e.preventDefault();
     const newPattern = {
@@ -25,51 +40,66 @@ function UploadPatterns() {
       pattern_image: patternImage,
     };
     await axios.post(`${API_URL}/patterns`, newPattern);
+    setShowModal(true);
+  };
+
+  const closeModal = (e) => {
+    e.preventDefault();
+    setShowModal(false);
   };
 
   return (
-    <section className="upload">
-      <form className="upload__form" onSubmit={handleSubmitForm}>
-        <h3 className="upload__title">Or, upload your pattern here</h3>
-        <div className="upload__label-name">
-          <label
-            className="upload__pattern-label"
-            htmlFor="upload__pattern-name"
-          >
-            pattern name
-          </label>
-          <input
-            className="upload__pattern-name"
-            onChange={handlePatternTitleChange}
-          ></input>
+    <form className="upload-pattern" onSubmit={handleSubmitForm}>
+      <div className="upload-pattern__label-name">
+        <label className="upload-pattern__label" htmlFor="upload-pattern__name">
+          pattern name
+        </label>
+        <input
+          className="upload-pattern__name"
+          onChange={handlePatternTitleChange}
+        ></input>
+      </div>
+      <div className="upload-pattern__label-body">
+        <label className="upload-pattern__label" htmlFor="upload-pattern__body">
+          pattern text
+        </label>
+        <input
+          className="upload-pattern__body"
+          onChange={handlePatternBodyChange}
+        ></input>
+      </div>
+      <div className="upload-pattern__label-image">
+        <label
+          className="upload-pattern__label"
+          htmlFor="upload-pattern__attach"
+        >
+          pattern image
+        </label>
+        <input
+          type="file"
+          className="upload-pattern__attach"
+          onChange={handlePatternImageChange}
+        ></input>
+      </div>
+      <button className="upload-pattern__button" type="submit">
+        upload
+      </button>
+
+      {showModal && (
+        <div className="upload-pattern__modal">
+          <div className="upload-pattern__modal-content">
+            <button
+              onClick={closeModal}
+              className="upload-pattern__modal-close"
+            >
+              {" "}
+              close{" "}
+            </button>
+            <p>Upload Successful!</p>
+          </div>
         </div>
-        <div className="upload__body">
-          <label
-            className="upload__pattern-label"
-            htmlFor="upload__pattern-body"
-          >
-            pattern text
-          </label>
-          <input
-            className="upload__pattern-body"
-            onChange={handlePatternBodyChange}
-          ></input>
-        </div>
-        <div className="upload__text-attach">
-          <label className="upload__text" htmlFor="upload__attach">
-            pattern image
-          </label>
-          <input
-            type="file"
-            className="upload__attach"
-            onChange={handlePatternImageChange}
-          ></input>
-        </div>
-        <button className="upload__button" type="submit">
-          upload
-        </button>
-      </form>
-    </section>
+      )}
+    </form>
   );
 }
 
