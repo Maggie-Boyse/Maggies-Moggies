@@ -6,7 +6,7 @@ import { API_URL } from "../../utils/api";
 function UploadPatterns() {
   const [patternTitle, setPatternTitle] = useState("");
   const [patternBody, setPatternBody] = useState("");
-  const [patternImage, setPatternImage] = useState("");
+  const [patternImage, setPatternImage] = (useState < File) | (null > null);
   const [showModal, setShowModal] = useState(false);
 
   const handlePatternTitleChange = (e) => {
@@ -15,13 +15,18 @@ function UploadPatterns() {
   const handlePatternBodyChange = (e) => {
     setPatternBody(e.target.value);
   };
-  const handlePatternImageChange = (e) => {
-    console.log(e.target);
-    console.log(e.target.value);
-    console.log(e.target.files);
-
-    setPatternImage(e.target.files[0]);
+  const handleFileChange = (e) => {
+    if (e.target.files) {
+      setPatternImage(e.target.files[0]);
+    }
   };
+  // const handlePatternImageChange = (e) => {
+  //   console.log(e.target);
+  //   console.log(e.target.value);
+  //   console.log(e.target.files);
+
+  //   setPatternImage(e.target.files[0]);
+  // };
 
   const handleSubmitForm = async (e) => {
     e.preventDefault();
@@ -66,10 +71,11 @@ function UploadPatterns() {
         >
           pattern image
         </label>
+
         <input
           type="file"
           className="upload-pattern__attach"
-          onChange={handlePatternImageChange}
+          onChange={handleFileChange}
         ></input>
       </div>
       <button className="upload-pattern__button" type="submit">
