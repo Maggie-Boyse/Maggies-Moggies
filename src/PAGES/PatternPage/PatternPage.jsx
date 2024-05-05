@@ -2,16 +2,18 @@ import "../PatternPage/PatternPage.scss";
 import Header from "../../COMPONENTS/Header/Header";
 import NavBar from "../../COMPONENTS/NavBar/NavBar";
 import SearchPatterns from "../../COMPONENTS/SearchPatterns/SearchPatterns";
-import SearchResult from "../../COMPONENTS/SearchResultList/SearchResultList";
+import SearchResultList from "../../COMPONENTS/SearchResultList/SearchResultList";
 // import PatternItem from "../../COMPONENTS/PatternItem/PatternItem";
 import Footer from "../../COMPONENTS/Footer/Footer";
 import { Link } from "react-router-dom";
 // import axios from "axios";
 // import { API_URL } from "../../utils/api";
-// import { useEffect, useState } from "react";
+import { useState } from "react";
 // import { useParams } from "react-router-dom";
 
 function PatternPage() {
+  const [results, setResults] = useState([]);
+
   // const { patternId } = useParams();
   // const [patternsData, setPatternsData] = useState([]);
   // const [patternList, setPatternList] = useState([]);
@@ -35,8 +37,9 @@ function PatternPage() {
       <Header />
       <NavBar />
       <h1 className="patterns__title">Search and Upload Patterns</h1>
-      <SearchPatterns />
-      <SearchResult />
+      <SearchPatterns setResults={setResults} />
+      {results && results.length > 0 && <SearchResultList results={results} />}
+
       <Link to="/upload" className="patterns__upload">
         Upload Here{" "}
       </Link>

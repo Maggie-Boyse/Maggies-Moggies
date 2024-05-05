@@ -12,7 +12,7 @@ export const SearchPatterns = ({ setResults }) => {
           return (
             value &&
             pattern &&
-            pattern.name &&
+            pattern.patten_title &&
             pattern.name.toLowerCase().includes(value)
           );
         });
