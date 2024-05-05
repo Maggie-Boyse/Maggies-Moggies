@@ -11,9 +11,10 @@
     font-size: 3rem;
     color: $dark-purple;
   }
-  &__slipknot-1 {
+  &__chaining-1 {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
   &__text {
     font-size: 2rem;
@@ -26,23 +27,24 @@
   }
   &__image-multi {
     width: 75%;
+    margin: 2rem;
     border-radius: 10px;
   }
   &__multiple-images {
     display: flex;
     flex-direction: column;
   }
-  &__slipknot-2 {
+  &__chaining-2 {
     display: flex;
     flex-direction: row;
     background-color: $light-purple;
   }
-  &__slipknot-3 {
+  &__chaining-3 {
     display: flex;
     flex-direction: row;
     background-color: $lilac;
   }
-  &__slipknot-4 {
+  &__chaining-4 {
     display: flex;
     flex-direction: row;
     background-color: $medium-purple;

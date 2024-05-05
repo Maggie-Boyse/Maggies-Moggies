@@ -4,6 +4,8 @@
 .learn-navbar {
   font-family: "Quicksand";
   background-color: $dark-purple;
+  position: relative;
+  bottom: 2rem;
   &__list {
     list-style: none;
     display: flex;

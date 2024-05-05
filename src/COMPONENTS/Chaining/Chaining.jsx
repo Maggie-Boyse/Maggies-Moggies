@@ -6,13 +6,12 @@ import chain4 from "../../assets/images/chain/chain-4.jpg";
 import chain5 from "../../assets/images/chain/chain-5.jpg";
 import chain6 from "../../assets/images/chain/chain-6.jpg";
 
-// don't forget to replace and delete
 
 function Chaining() {
   return (
     <section className="chaining">
       <h2 className="chaining__title">Slipknot & Chaining</h2>
-      <div className="chaining__slipknot-1">
+      <div className="chaining__chaining-1">
         <p className="chaining__text">
           {" "}
           To begin, we will hold our yarn at one end, in a loop. Make sure your
@@ -24,13 +23,13 @@ function Chaining() {
           </span>
         </p>
         <div className="chaining__mulitple-images">
-          <img src={chain1} alt="slipknot image" className="chaining__image-multi" />
-          <img src={chain2} alt="slipknot image" className="chaining__image-multi" />
+          <img src={chain1} alt="chaining image" className="chaining__image-multi" />
+          <img src={chain2} alt="chaining image" className="chaining__image-multi" />
         </div>
       </div>
 
-      <div className="chaining__slipknot-2">
-        <img src={chain3} alt="slipknot image" className="chaining__image" />
+      <div className="chaining__chaining-2">
+        <img src={chain3} alt="chaining image" className="chaining__image" />
         <p className="chaining__text">
           Then, catch your trailing yarn, and pull it back{" "}
           <span className="chaining__span">through</span> the loop you made,
@@ -38,7 +37,7 @@ function Chaining() {
         </p>
       </div>
 
-      <div className="chaining__slipknot-3">
+      <div className="chaining__chaining-3">
         <p className="chaining__text">
           Now, keeping our hook snug inside the loop, we'll grasp the knot
           between finger and thumb. Catch the trailing yarn once more, and pull
@@ -50,7 +49,7 @@ function Chaining() {
         </div>
       </div>
 
-      <div className="chaining__slipknot-4">
+      <div className="chaining__chaining-4">
         <img src={chain6} alt="placeholder" className="chaining__image" />
         <p className="chaining__text">
           Repeat until desired length of project!
