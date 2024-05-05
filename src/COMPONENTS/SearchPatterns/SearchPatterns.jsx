@@ -1,6 +1,28 @@
 import "../SearchPatterns/SearchPatterns.scss";
+import { useState } from "react";
+import { API_URL } from "../../utils/api";
 
-function SearchPatterns() {
+export const SearchPatterns = ({ setResults }) => {
+  const [input, setInput] = useState("");
+  const fetchData = (value) => {
+    fetch(`${API_URL}/patterns`)
+      .then((response) => response.json())
+      .then((json) => {
+        const results = json.filter((pattern) => {
+          return (
+            value &&
+            pattern &&
+            pattern.name &&
+            pattern.name.toLowerCase().includes(value)
+          );
+        });
+        setResults(results);
+      });
+  };
+  const handleChange = (value) => {
+    setInput(value);
+    fetchData(value);
+  };
   return (
     <section className="search">
       <div>
@@ -12,6 +34,8 @@ function SearchPatterns() {
             <input
               className="search__input"
               placeholder="Try, 'dish sponge'"
+              value={input}
+              onChange={(e) => handleChange(e.target.value)}
             ></input>
             <button className="search__button">search</button>
           </div>
@@ -19,6 +43,6 @@ function SearchPatterns() {
       </div>
     </section>
   );
-}
+};
 
 export default SearchPatterns;
