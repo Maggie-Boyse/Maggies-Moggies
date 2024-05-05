@@ -1,5 +1,11 @@
 import "../Chaining/Chaining.scss";
-import placeholder from "../../assets/images/crochet-image-placeholder.jpg";
+import chain1 from "../../assets/images/chain/chain-1.jpg";
+import chain2 from "../../assets/images/chain/chain-2.jpg";
+import chain3 from "../../assets/images/chain/chain-3.jpg";
+import chain4 from "../../assets/images/chain/chain-4.jpg";
+import chain5 from "../../assets/images/chain/chain-5.jpg";
+import chain6 from "../../assets/images/chain/chain-6.jpg";
+
 // don't forget to replace and delete
 
 function Chaining() {
@@ -17,23 +23,14 @@ function Chaining() {
             Pictured is my preferred method.
           </span>
         </p>
-        <img
-          src={placeholder}
-          // don't forget to update src and alt
-          alt="placeholder"
-          className="chaining__image-1"
-          // replace with proper class name later
-        />
+        <div className="chaining__mulitple-images">
+          <img src={chain1} alt="slipknot image" className="chaining__image-multi" />
+          <img src={chain2} alt="slipknot image" className="chaining__image-multi" />
+        </div>
       </div>
 
       <div className="chaining__slipknot-2">
-        <img
-          src={placeholder}
-          // don't forget to update src and alt
-          alt="placeholder"
-          className="chaining__image-2"
-          // replace with proper class name later
-        />
+        <img src={chain3} alt="slipknot image" className="chaining__image" />
         <p className="chaining__text">
           Then, catch your trailing yarn, and pull it back{" "}
           <span className="chaining__span">through</span> the loop you made,
@@ -47,23 +44,14 @@ function Chaining() {
           between finger and thumb. Catch the trailing yarn once more, and pull
           through the loop.
         </p>
-        <img
-          src={placeholder}
-          // don't forget to update src and alt
-          alt="placeholder"
-          className="chaining__image-3"
-          // replace with proper class name later
-        />
+        <div className="chaining__mulitple-images">
+          <img src={chain4} alt="placeholder" className="chaining__image-multi" />
+          <img src={chain5} alt="placeholder" className="chaining__image-multi" />
+        </div>
       </div>
 
       <div className="chaining__slipknot-4">
-        <img
-          src={placeholder}
-          // don't forget to update src and alt
-          alt="placeholder"
-          className="chaining__image-4"
-          // replace with proper class name later
-        />
+        <img src={chain6} alt="placeholder" className="chaining__image" />
         <p className="chaining__text">
           Repeat until desired length of project!
         </p>
