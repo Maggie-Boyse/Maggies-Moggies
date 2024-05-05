@@ -28,9 +28,11 @@ function CommBoard() {
   return (
     <div className="board">
       <h2 className="board__title">Posts From Our Community!</h2>
-      {postsData.map((post) => (
-        <PostItem key={post.id} post={post} postToLoad={postToLoad} />
-      ))}
+      <div className="board__posts">
+        {postsData.map((post) => (
+          <PostItem key={post.id} post={post} postToLoad={postToLoad} />
+        ))}
+      </div>
     </div>
   );
 }
