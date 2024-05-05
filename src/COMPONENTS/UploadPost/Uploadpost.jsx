@@ -1,18 +1,13 @@
 import "../UploadPost/UploadPost.scss";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { API_URL } from "../../utils/api";
 
 function UploadPost() {
   // const [username, setUsername] = useState("");
   const [postBody, setPostBody] = useState("");
+  const [showErrorModal, setshowErrorModal] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const navigate = useNavigate();
-
-  // const handleUsernameChange = (e) => {
-  //   setUsername(e.target.value);
-  // };
 
   const handlePostBodyChange = (e) => {
     setPostBody(e.target.value);
@@ -21,10 +16,12 @@ function UploadPost() {
   const handleSubmitForm = async (e) => {
     e.preventDefault();
     const username = localStorage.getItem("username");
-    const newPost = { post_body: postBody, username };
+    if (username === null) {
+      setshowErrorModal(true);
+    }
+    const newPost = { post_body: postBody, username: username };
     await axios.post(`${API_URL}/posts`, newPost);
     setShowModal(true);
-    navigate("/");
   };
   const closeModal = (e) => {
     e.preventDefault();
@@ -32,26 +29,31 @@ function UploadPost() {
   };
   return (
     <form className="upload-post" onSubmit={handleSubmitForm}>
-      <h3 className="upload-post__title">Add your own post here!</h3>
-      <label htmlFor="upload-post__name" className="upload-post__label">
-        user id
-      </label>
-      {/* <input
-        className="upload-post__name"
-        onChange={handleUsernameChange}
-        required
-      ></input> */}
+      <h3 className="upload-post__title">Add a posting of your own!</h3>
       <label htmlFor="upload-post__body" className="upload-post__label">
-        post body
+        Comment here:
       </label>
       <input
         className="upload-post__body"
         onChange={handlePostBodyChange}
         required
       ></input>
+
       <button className="upload-post__button" type="submit">
         post
       </button>
+
+      {showErrorModal && (
+        <div className="upload-post__modal">
+          <p className="upload-post__modal-content">
+            Please log in to post a comment!
+          </p>
+          <button onClick={closeModal} className="upload-post__modal-close">
+            {" "}
+            close{" "}
+          </button>
+        </div>
+      )}
 
       {showModal && (
         <div className="upload-post__modal">
