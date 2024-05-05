@@ -1,6 +1,5 @@
 import "../SignIn/SignIn.scss";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { API_URL } from "../../utils/api";
 import axios from "axios";
 
@@ -8,7 +7,6 @@ const SignIn = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showModal, setShowModal] = useState(false);
-  const navigate = useNavigate();
 
   const handleUsernameChange = (e) => setUsername(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
@@ -25,7 +23,6 @@ const SignIn = () => {
       localStorage.setItem("authToken", loginRes.data.token);
       localStorage.setItem("username", loginRes.data.username);
       setShowModal(true);
-      navigate("/");
     } else {
       // Handle login error
     }
@@ -72,7 +69,7 @@ const SignIn = () => {
               close{" "}
             </button>
             <p>Sign in Successful!</p>
-            <p> Welcome {username}</p>
+            <p> Welcome {username}!</p>
           </div>
         </div>
       )}

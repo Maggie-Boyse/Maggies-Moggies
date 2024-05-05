@@ -1,6 +1,5 @@
 import "../SignUp/SignUp.scss";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { API_URL } from "../../utils/api";
 
@@ -9,7 +8,6 @@ function SignUp() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showModal, setShowModal] = useState(false);
-  const navigate = useNavigate();
 
   const onEmailChange = (e) => setEmail(e.target.value);
   const onUsernameChange = (e) => setUsername(e.target.value);
@@ -24,14 +22,15 @@ function SignUp() {
       localStorage.setItem("authToken", signupRes.data.token);
       localStorage.setItem("username", signupRes.data.username);
       setShowModal(true);
-      navigate("/");
     } else {
     }
   };
+
   const closeModal = (e) => {
     e.preventDefault();
     setShowModal(false);
   };
+
   return (
     <form className="signup-form">
       <h3 className="signup-form__title">Sign Up</h3>
@@ -78,7 +77,7 @@ function SignUp() {
               close{" "}
             </button>
             <p>Sign up Successful!</p>
-            <p> Welcome {username}</p>
+            <p> Welcome {username}!</p>
           </div>
         </div>
       )}
