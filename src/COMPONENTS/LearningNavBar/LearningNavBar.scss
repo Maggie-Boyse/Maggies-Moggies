@@ -3,9 +3,6 @@
 
 .learn-navbar {
   font-family: "Quicksand";
-  background-color: $dark-purple;
-  position: relative;
-  bottom: 2rem;
   &__list {
     list-style: none;
     display: flex;
@@ -13,7 +10,7 @@
   }
   &__item {
     text-decoration: none;
-    color: black;
+    color: white;
     width: 15.5rem;
     margin: 2rem 0.5rem;
     padding: 0.5rem;
@@ -21,7 +18,7 @@
     font-size: 1.5rem;
     font-weight: 400;
     text-align: center;
-    background-color: $light-purple;
+    background-color: $dark-purple;
     box-shadow: 5px 5px 5px black;
   }
 }
