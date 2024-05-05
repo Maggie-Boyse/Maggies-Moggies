@@ -1,6 +1,11 @@
 import "../SearchPatterns/SearchPatterns.scss";
+// import { API_URL } from "../../utils/api";
+// import { useParams } from "react-router-dom";
+// import URLSearchParams from "url-search-params";
+
 
 function SearchPatterns() {
+
   return (
     <section className="search">
       <div>

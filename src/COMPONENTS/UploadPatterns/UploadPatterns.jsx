@@ -80,6 +80,8 @@ function UploadPatterns() {
           onChange={handleFileChange}
         ></input>
       </div>
+
+
       <button className="upload-pattern__button" type="submit">
         upload
       </button>
