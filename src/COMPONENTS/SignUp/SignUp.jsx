@@ -1,6 +1,5 @@
 import "../SignUp/SignUp.scss";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { API_URL } from "../../utils/api";
 
@@ -8,7 +7,7 @@ function SignUp() {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
+  const [showModal, setShowModal] = useState(false);
 
   const onEmailChange = (e) => setEmail(e.target.value);
   const onUsernameChange = (e) => setUsername(e.target.value);
@@ -22,10 +21,16 @@ function SignUp() {
     if (signupRes.status === 200) {
       localStorage.setItem("authToken", signupRes.data.token);
       localStorage.setItem("username", signupRes.data.username);
-      navigate("/");
+      setShowModal(true);
+    } else {
     }
-    /////// alert here?
   };
+
+  const closeModal = (e) => {
+    e.preventDefault();
+    setShowModal(false);
+  };
+
   return (
     <form className="signup-form">
       <h3 className="signup-form__title">Sign Up</h3>
@@ -36,6 +41,7 @@ function SignUp() {
         className="signup-form__input"
         value={email}
         onChange={onEmailChange}
+        required
       ></input>
       <label htmlFor="signup-form__username" className="signup-form__label">
         username
@@ -44,6 +50,7 @@ function SignUp() {
         className="signup-form__input"
         value={username}
         onChange={onUsernameChange}
+        required
       ></input>
       <label htmlFor="signup-form__password" className="signup-form__label">
         password
@@ -52,6 +59,7 @@ function SignUp() {
         className="signup-form__input"
         value={password}
         onChange={onPasswordChange}
+        required
       ></input>
       <button
         className="signup-form__button"
@@ -60,6 +68,19 @@ function SignUp() {
       >
         signup
       </button>
+
+      {showModal && (
+        <div className="signup-form__modal">
+          <div className="signup-form__modal-content">
+            <button onClick={closeModal} className="signup-form__modal-close">
+              {" "}
+              close{" "}
+            </button>
+            <p>Sign up Successful!</p>
+            <p> Welcome {username}!</p>
+          </div>
+        </div>
+      )}
     </form>
   );
 }
