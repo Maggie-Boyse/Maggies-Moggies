@@ -1,11 +1,12 @@
 import "../SearchPatterns/SearchPatterns.scss";
 import { useState } from "react";
+import axios from "axios";
 import { API_URL } from "../../utils/api";
 
 export const SearchPatterns = ({ setResults }) => {
   const [input, setInput] = useState("");
-  const fetchData = (value) => {
-    fetch(`${API_URL}/patterns`)
+  const fetchData = async (value) => {
+    await axios.fetch(`${API_URL}/patterns`)
       .then((response) => response.json())
       .then((json) => {
         const results = json.filter((pattern) => {

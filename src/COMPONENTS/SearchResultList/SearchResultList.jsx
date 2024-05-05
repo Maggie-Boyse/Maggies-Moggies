@@ -12,3 +12,13 @@ export const SearchResultList = ({ results }) => {
 };
 
 export default SearchResultList;
+
+
+<div key={pattern.id} className="pattern__item">
+<h3 className="pattern__title">{pattern.pattern_title}</h3>
+<p className="pattern__username">{pattern.username}</p>
+<p className="pattern__body">{pattern.pattern_body}</p>
+<p className="pattern__timestamp">
+  {moment(pattern.created_at).fromNow()}
+</p>
+</div>
