@@ -2,6 +2,7 @@
 @use "../../styles/partials/variables" as *;
 
 .upload-pattern {
+  margin-left: 2rem;
   &__title {
     font-size: 2rem;
     color: $dark-purple;
@@ -28,6 +29,7 @@
     background-color: white;
     box-shadow: 5px 5px 5px $dark-purple;
     margin-right: 1rem;
+    margin-bottom: 1rem;
     font-size: 1.3rem;
     &:focus {
       border: solid 3px;
@@ -43,6 +45,7 @@
     background-color: white;
     box-shadow: 5px 5px 5px $dark-purple;
     margin-right: 1rem;
+    margin-bottom: 1rem;
     font-size: 1.3rem;
     &:focus {
       border: solid 3px;
@@ -114,7 +117,7 @@
     border: 1px solid #888;
     width: 80%;
   }
-  &__button {
+  &__modal-close {
     margin: 0.5rem;
     width: 12rem;
     height: 3.4rem;
