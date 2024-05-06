@@ -11,6 +11,7 @@ export const SearchPatterns = ({ setResults }) => {
     );
     const patternsData = patternsReq.data;
     setResults(patternsData);
+    console.log(patternsData);
   };
   const handleChange = (value) => {
     setInput(value);
@@ -25,7 +26,7 @@ export const SearchPatterns = ({ setResults }) => {
       <div>
         <form className="search__form">
           <label className="search__text" htmlFor="search__input">
-            Simultaneously search Ravelry and Maggie's Moggies for patterns!
+            Search Maggie's Moggies for patterns!
           </label>
           <div className="search__input-button">
             <input
