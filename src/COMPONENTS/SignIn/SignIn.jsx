@@ -50,6 +50,7 @@ const SignIn = () => {
       <input
         className="signin-form__input"
         value={password}
+        type="password"
         onChange={handlePasswordChange}
         required
       ></input>

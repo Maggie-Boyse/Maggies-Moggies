@@ -5,24 +5,21 @@ import { API_URL } from "../../utils/api";
 
 export const SearchPatterns = ({ setResults }) => {
   const [input, setInput] = useState("");
-  const fetchData = async (value) => {
-    await axios.fetch(`${API_URL}/patterns`)
-      .then((response) => response.json())
-      .then((json) => {
-        const results = json.filter((pattern) => {
-          return (
-            value &&
-            pattern &&
-            pattern.patten_title &&
-            pattern.name.toLowerCase().includes(value)
-          );
-        });
-        setResults(results);
-      });
+  const fetchData = async () => {
+
+    const patternsReq = await axios.get(
+      `${API_URL}/patterns?keywords=${encodeURI(input)}`
+    );
+    const patternsData = patternsReq.data;
+    setResults(patternsData);
   };
   const handleChange = (value) => {
     setInput(value);
-    fetchData(value);
+  };
+  const handleSearch = (e) => {
+    e.preventDefault();
+    console.log("From submitted!", input);
+    fetchData();
   };
   return (
     <section className="search">
@@ -38,7 +35,9 @@ export const SearchPatterns = ({ setResults }) => {
               value={input}
               onChange={(e) => handleChange(e.target.value)}
             ></input>
-            <button className="search__button">search</button>
+            <button className="search__button" onClick={handleSearch}>
+              search
+            </button>
           </div>
         </form>
       </div>

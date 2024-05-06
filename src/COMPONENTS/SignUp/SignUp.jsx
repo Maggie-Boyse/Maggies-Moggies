@@ -58,6 +58,7 @@ function SignUp() {
       <input
         className="signup-form__input"
         value={password}
+        type="password"
         onChange={onPasswordChange}
         required
       ></input>

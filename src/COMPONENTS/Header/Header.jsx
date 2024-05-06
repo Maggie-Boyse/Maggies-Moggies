@@ -10,11 +10,11 @@ function Header() {
   const authToken = localStorage.getItem("authToken");
 
   useEffect(() => {
-    const decoded = jwtDecode(authToken);
-    const currentDate = new Date();
     if (authToken === null || undefined) {
       return;
     }
+    const decoded = jwtDecode(authToken);
+    const currentDate = new Date();
     if (decoded.exp * 1000 < currentDate.getTime()) {
       setUserHeader(null);
       localStorage.removeItem("username");
