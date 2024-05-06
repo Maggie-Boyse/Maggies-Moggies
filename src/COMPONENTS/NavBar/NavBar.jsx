@@ -17,10 +17,9 @@ function NavBar() {
         <Link to="/patterns" className="navbar__item">
           Patterns
         </Link>
-        {/* <Link to="/builder" className="navbar__item">
+        <Link to="/patternbuilder" className="navbar__item">
           Pattern Builder
-        </Link> */}
-        {/* upload pattern modal or whatever, not new page */}
+        </Link>
       </ul>
     </div>
   );

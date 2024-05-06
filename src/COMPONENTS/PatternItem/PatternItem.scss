@@ -11,11 +11,14 @@
     border-radius: 10px;
   }
   &__title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: $dark-purple;
   }
   &__username {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: $plum;
+  }
+  &__body {
+    font-size: 1.5rem;
   }
 }
