@@ -37,12 +37,12 @@ const SignIn = () => {
         localStorage.setItem("user_id", loginRes.data.user_id);
         console.log(loginRes.data);
         setShowModal(true);
-      } else if (loginRes.status === 401) {
-        setShowErrorModal(true);
-        return;
+        e.target.reset();
       }
     } catch (error) {
+      setShowErrorModal(true);
       console.log(error, "Cannot log in right now");
+      return;
     }
   };
 

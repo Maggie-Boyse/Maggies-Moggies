@@ -6,6 +6,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem;
   background-image: linear-gradient($light-purple, $plum);
   &__logo-title {
     display: flex;
@@ -78,5 +79,8 @@
     border-radius: 10px;
     height: 5rem;
     box-shadow: 5px 5px 5px $dark-purple;
+  }
+  &__span {
+    font-weight: 700;
   }
 }
