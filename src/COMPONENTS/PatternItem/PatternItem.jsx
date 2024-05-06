@@ -6,6 +6,7 @@ function PatternItem({ pattern }) {
     <section className="pattern">
       <div key={pattern.id} className="pattern__item">
         <h3 className="pattern__title">{pattern.pattern_title}</h3>
+        {/* <div>{pattern.pattern_image}</div> */}
         <p className="pattern__username">{pattern.username}</p>
         <p className="pattern__body">{pattern.pattern_body}</p>
         <p className="pattern__timestamp">

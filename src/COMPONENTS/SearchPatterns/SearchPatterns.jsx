@@ -2,24 +2,23 @@ import "../SearchPatterns/SearchPatterns.scss";
 import { useState } from "react";
 import axios from "axios";
 import { API_URL } from "../../utils/api";
-import PatternItem from "../PatternItem/PatternItem";
 
 export const SearchPatterns = ({ setResults }) => {
   const [input, setInput] = useState("");
   const fetchData = async () => {
-
     const patternsReq = await axios.get(
       `${API_URL}/patterns?keywords=${encodeURI(input)}`
     );
     const patternsData = patternsReq.data;
     setResults(patternsData);
+    console.log(patternsData);
   };
   const handleChange = (value) => {
     setInput(value);
   };
   const handleSearch = (e) => {
     e.preventDefault();
-    console.log("From submitted!", input);
+    console.log("Form submitted!", input);
     fetchData();
   };
   return (
@@ -27,7 +26,7 @@ export const SearchPatterns = ({ setResults }) => {
       <div>
         <form className="search__form">
           <label className="search__text" htmlFor="search__input">
-            Simultaneously search Ravelry and Maggie's Moggies for patterns!
+            Search Maggie's Moggies for patterns!
           </label>
           <div className="search__input-button">
             <input
@@ -39,7 +38,6 @@ export const SearchPatterns = ({ setResults }) => {
             <button className="search__button" onClick={handleSearch}>
               search
             </button>
-            {/* <PatternItem /> */}
           </div>
         </form>
       </div>
