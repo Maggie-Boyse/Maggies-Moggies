@@ -8,13 +8,24 @@ function SignUp() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showModal, setShowModal] = useState(false);
+  const [showErrorModal, setShowErrorModal] = useState(false);
 
   const onEmailChange = (e) => setEmail(e.target.value);
   const onUsernameChange = (e) => setUsername(e.target.value);
   const onPasswordChange = (e) => setPassword(e.target.value);
-
+  const validateField = () => {
+    if (!username || !password || !email) {
+      return false;
+    }
+    return true;
+  };
   const handleSignup = async (e) => {
     e.preventDefault();
+    const validation = validateField();
+    console.log(validation);
+    if (!validation) {
+      // setShowErrorModal(true);
+    }
     const newUser = { email: email, username: username, password: password };
     const signupRes = await axios.post(`${API_URL}/users`, newUser);
 
@@ -35,7 +46,7 @@ function SignUp() {
     <form className="signup-form">
       <h3 className="signup-form__title">Sign Up</h3>
       <label htmlFor="signup-form__email" className="signup-form__label">
-        email
+        email*:
       </label>
       <input
         className="signup-form__input"
@@ -44,7 +55,7 @@ function SignUp() {
         required
       ></input>
       <label htmlFor="signup-form__username" className="signup-form__label">
-        username
+        username*:
       </label>
       <input
         className="signup-form__input"
@@ -53,7 +64,7 @@ function SignUp() {
         required
       ></input>
       <label htmlFor="signup-form__password" className="signup-form__label">
-        password
+        password*:
       </label>
       <input
         className="signup-form__input"
@@ -73,12 +84,24 @@ function SignUp() {
       {showModal && (
         <div className="signup-form__modal">
           <div className="signup-form__modal-content">
+            <p>Sign up Successful!</p>
+            <p> Welcome {username}!</p>
             <button onClick={closeModal} className="signup-form__modal-close">
               {" "}
               close{" "}
             </button>
-            <p>Sign up Successful!</p>
-            <p> Welcome {username}!</p>
+          </div>
+        </div>
+      )}
+
+      {showErrorModal && (
+        <div className="signup-form__modal">
+          <div className="signup-form__modal-content">
+            <p>Please fill out all required fields!</p>
+            <button onClick={closeModal} className="signup-form__modal-close">
+              {" "}
+              close{" "}
+            </button>
           </div>
         </div>
       )}

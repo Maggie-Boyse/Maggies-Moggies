@@ -36,7 +36,7 @@ const SignIn = () => {
     <form className="signin-form">
       <h3 className="signin-form__title">Sign In</h3>
       <label htmlFor="signin-form__username" className="signin-form__label">
-        username
+        username*:
       </label>
       <input
         className="signin-form__input"
@@ -45,7 +45,7 @@ const SignIn = () => {
         required
       ></input>
       <label htmlFor="signin-form__password" className="signin-form__label">
-        password
+        password*:
       </label>
       <input
         className="signin-form__input"
