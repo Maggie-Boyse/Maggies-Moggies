@@ -21,7 +21,7 @@
     font-family: "Quicksand";
     font-size: 5rem;
     color: $dark-purple;
-    margin: 0.5rem;
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
   }
   &__signs {
     display: flex;
@@ -61,5 +61,21 @@
     &:hover {
       background-color: $dark-purple;
     }
+  }
+}
+
+.user-header {
+  &__user {
+    margin: 1rem;
+    width: 12rem;
+    background-color: $plum;
+    color: white;
+    font-family: "Quicksand";
+    font-weight: 400;
+    font-size: 1.5rem;
+    align-items: center;
+    border-radius: 10px;
+    height: 5rem;
+    box-shadow: 5px 5px 5px $dark-purple;
   }
 }

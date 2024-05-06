@@ -40,8 +40,8 @@ function Header() {
         <h1 className="header__title">Maggie's Moggies</h1>
       </div>
       {userHeader ? (
-        <div className="user-header__user">
-          <p>Welcome {userHeader}</p>
+        <div className="user-header">
+          <p className="user-header__user">Welcome {userHeader}!</p>
         </div>
       ) : (
         <div className="header__signs">
