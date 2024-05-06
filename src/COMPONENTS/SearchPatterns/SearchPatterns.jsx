@@ -2,11 +2,11 @@ import "../SearchPatterns/SearchPatterns.scss";
 import { useState } from "react";
 import axios from "axios";
 import { API_URL } from "../../utils/api";
+import PatternItem from "../PatternItem/PatternItem";
 
 export const SearchPatterns = ({ setResults }) => {
   const [input, setInput] = useState("");
   const fetchData = async () => {
-
     const patternsReq = await axios.get(
       `${API_URL}/patterns?keywords=${encodeURI(input)}`
     );
@@ -38,6 +38,7 @@ export const SearchPatterns = ({ setResults }) => {
             <button className="search__button" onClick={handleSearch}>
               search
             </button>
+            <PatternItem />
           </div>
         </form>
       </div>

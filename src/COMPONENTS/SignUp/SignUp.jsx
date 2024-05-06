@@ -19,26 +19,31 @@ function SignUp() {
     }
     return true;
   };
+  
   const handleSignup = async (e) => {
     e.preventDefault();
     const validation = validateField();
     console.log(validation);
     if (!validation) {
-      // setShowErrorModal(true);
+      setShowErrorModal(true);
+      return;
     }
     const newUser = { email: email, username: username, password: password };
-    const signupRes = await axios.post(`${API_URL}/users`, newUser);
-
-    if (signupRes.status === 200) {
-      localStorage.setItem("authToken", signupRes.data.token);
-      localStorage.setItem("username", signupRes.data.username);
-      setShowModal(true);
-    } else {
+    try {
+      const signupRes = await axios.post(`${API_URL}/users`, newUser);
+      if (signupRes.status === 200) {
+        localStorage.setItem("authToken", signupRes.data.token);
+        localStorage.setItem("username", signupRes.data.username);
+        setShowModal(true);
+      }
+    } catch (error) {
+      console.log(error, "Cannot sign up right now");
     }
   };
 
   const closeModal = (e) => {
     e.preventDefault();
+    setShowErrorModal(false);
     setShowModal(false);
   };
 
