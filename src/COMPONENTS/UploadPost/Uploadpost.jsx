@@ -4,9 +4,9 @@ import axios from "axios";
 import { API_URL } from "../../utils/api";
 
 function UploadPost() {
-  // const [username, setUsername] = useState("");
   const [postBody, setPostBody] = useState("");
-  const [showErrorModal, setshowErrorModal] = useState(false);
+  const [postData, setPostData] = useState("");
+  const [showErrorModal, setShowErrorModal] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
   const handlePostBodyChange = (e) => {
@@ -16,17 +16,28 @@ function UploadPost() {
   const handleSubmitForm = async (e) => {
     e.preventDefault();
     const username = localStorage.getItem("username");
+    const userId = localStorage.getItem("user_id");
+
     if (username === null) {
-      setshowErrorModal(true);
+      setShowErrorModal(true);
+      return;
+    } else {
+      try {
+        const newPost = { post_body: postBody, user_id: userId };
+        await axios.post(`${API_URL}/posts`, newPost);
+        setShowModal(true);
+      } catch (error) {
+        console.log(error, "Cannot post right now");
+      }
     }
-    const newPost = { post_body: postBody, username: username };
-    await axios.post(`${API_URL}/posts`, newPost);
-    setShowModal(true);
   };
+
   const closeModal = (e) => {
     e.preventDefault();
     setShowModal(false);
+    setShowErrorModal(false);
   };
+
   return (
     <form className="upload-post" onSubmit={handleSubmitForm}>
       <h3 className="upload-post__title">Add a posting of your own!</h3>

@@ -34,6 +34,8 @@ const SignIn = () => {
       if (loginRes.status === 200) {
         localStorage.setItem("authToken", loginRes.data.token);
         localStorage.setItem("username", loginRes.data.username);
+        localStorage.setItem("user_id", loginRes.data.user_id);
+        console.log(loginRes.data);
         setShowModal(true);
       } else if (loginRes.status === 401) {
         setShowErrorModal(true);

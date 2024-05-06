@@ -19,7 +19,7 @@ function SignUp() {
     }
     return true;
   };
-  
+
   const handleSignup = async (e) => {
     e.preventDefault();
     const validation = validateField();
