@@ -56,13 +56,14 @@
     overflow: auto;
     background-color: $light-purple;
     background-color: #5c125656;
-    &__modal-content {
-      background-color: #fefefe;
-      margin: 15% auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-    }
+  }
+  &__modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid $medium-purple;
+    border-radius: 10px;
+    width: 80%;
   }
   &__button {
     margin: 0.5rem;

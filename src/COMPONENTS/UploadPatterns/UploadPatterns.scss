@@ -114,7 +114,8 @@
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid $medium-purple;
+    border-radius: 10px;
     width: 80%;
   }
   &__modal-close {

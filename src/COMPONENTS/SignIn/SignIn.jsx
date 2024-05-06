@@ -7,28 +7,46 @@ const SignIn = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showModal, setShowModal] = useState(false);
+  const [showErrorModal, setShowErrorModal] = useState(false);
 
   const handleUsernameChange = (e) => setUsername(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
+  const validateField = () => {
+    if (!username || !password) {
+      return false;
+    }
+    return true;
+  };
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
-    const loginRes = await axios.post(`${API_URL}/users/login`, {
-      username,
-      password,
-    });
-
-    if (loginRes.status === 200) {
-      localStorage.setItem("authToken", loginRes.data.token);
-      localStorage.setItem("username", loginRes.data.username);
-      setShowModal(true);
-    } else {
-      // Handle login error
+    const validation = validateField();
+    console.log(validation);
+    if (!validation) {
+      setShowErrorModal(true);
+      return;
+    }
+    try {
+      const loginRes = await axios.post(`${API_URL}/users/login`, {
+        username,
+        password,
+      });
+      if (loginRes.status === 200) {
+        localStorage.setItem("authToken", loginRes.data.token);
+        localStorage.setItem("username", loginRes.data.username);
+        setShowModal(true);
+      } else if (loginRes.status === 401) {
+        setShowErrorModal(true);
+        return;
+      }
+    } catch (error) {
+      console.log(error, "Cannot log in right now");
     }
   };
+
   const closeModal = (e) => {
     e.preventDefault();
+    setShowErrorModal(false);
     setShowModal(false);
   };
 
@@ -36,7 +54,7 @@ const SignIn = () => {
     <form className="signin-form">
       <h3 className="signin-form__title">Sign In</h3>
       <label htmlFor="signin-form__username" className="signin-form__label">
-        username
+        username*:
       </label>
       <input
         className="signin-form__input"
@@ -45,11 +63,12 @@ const SignIn = () => {
         required
       ></input>
       <label htmlFor="signin-form__password" className="signin-form__label">
-        password
+        password*:
       </label>
       <input
         className="signin-form__input"
         value={password}
+        type="password"
         onChange={handlePasswordChange}
         required
       ></input>
@@ -64,12 +83,26 @@ const SignIn = () => {
       {showModal && (
         <div className="signin-form__modal">
           <div className="signin-form__modal-content">
+            <p>Sign in Successful!</p>
+            <p> Welcome {username}!</p>
             <button onClick={closeModal} className="signin-form__modal-close">
               {" "}
               close{" "}
             </button>
-            <p>Sign in Successful!</p>
-            <p> Welcome {username}!</p>
+          </div>
+        </div>
+      )}
+      {showErrorModal && (
+        <div className="signup-form__modal">
+          <div className="signup-form__modal-content">
+            <p>
+              Please fill out all required fields, ensure password and username
+              are correct!
+            </p>
+            <button onClick={closeModal} className="signup-form__modal-close">
+              {" "}
+              close{" "}
+            </button>
           </div>
         </div>
       )}

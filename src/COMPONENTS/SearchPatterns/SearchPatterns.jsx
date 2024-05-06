@@ -1,11 +1,26 @@
 import "../SearchPatterns/SearchPatterns.scss";
-// import { API_URL } from "../../utils/api";
-// import { useParams } from "react-router-dom";
-// import URLSearchParams from "url-search-params";
+import { useState } from "react";
+import axios from "axios";
+import { API_URL } from "../../utils/api";
+import PatternItem from "../PatternItem/PatternItem";
 
-
-function SearchPatterns() {
-
+export const SearchPatterns = ({ setResults }) => {
+  const [input, setInput] = useState("");
+  const fetchData = async () => {
+    const patternsReq = await axios.get(
+      `${API_URL}/patterns?keywords=${encodeURI(input)}`
+    );
+    const patternsData = patternsReq.data;
+    setResults(patternsData);
+  };
+  const handleChange = (value) => {
+    setInput(value);
+  };
+  const handleSearch = (e) => {
+    e.preventDefault();
+    console.log("From submitted!", input);
+    fetchData();
+  };
   return (
     <section className="search">
       <div>
@@ -17,13 +32,18 @@ function SearchPatterns() {
             <input
               className="search__input"
               placeholder="Try, 'dish sponge'"
+              value={input}
+              onChange={(e) => handleChange(e.target.value)}
             ></input>
-            <button className="search__button">search</button>
+            <button className="search__button" onClick={handleSearch}>
+              search
+            </button>
+            <PatternItem />
           </div>
         </form>
       </div>
     </section>
   );
-}
+};
 
 export default SearchPatterns;
