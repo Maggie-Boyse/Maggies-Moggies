@@ -6,13 +6,8 @@ import { API_URL } from "../../utils/api";
 function UploadPatterns() {
   const [patternTitle, setPatternTitle] = useState("");
   const [patternBody, setPatternBody] = useState("");
-  const [patternImage, setPatternImage] = useState("");
+  const [patternImage, setPatternImage] = (useState < File) | (null > null);
   const [showModal, setShowModal] = useState(false);
-  // const formEl = e.target;
-
-  //   const titleVal = formEl.patternTitle.value;
-  //   const patternVal = formEl.patternBody.value;
-  //   const imageVal = formEl.patternImage.value;
 
   const handlePatternTitleChange = (e) => {
     setPatternTitle(e.target.value);
@@ -20,17 +15,18 @@ function UploadPatterns() {
   const handlePatternBodyChange = (e) => {
     setPatternBody(e.target.value);
   };
-  const handlePatternImageChange = (e) => {
-    console.log(e.target);
-    console.log(e.target.value);
-    console.log(e.target.files);
-
-    setPatternImage(e.target.files[0]);
+  const handleFileChange = (e) => {
+    if (e.target.files) {
+      setPatternImage(e.target.files[0]);
+    }
   };
-  // if (titleVal === "" || patternVal === "" || imageVal === " ") {
-  //   alert("Please fill out all the fields");
-  //   return;
-  // }
+  // const handlePatternImageChange = (e) => {
+  //   console.log(e.target);
+  //   console.log(e.target.value);
+  //   console.log(e.target.files);
+
+  //   setPatternImage(e.target.files[0]);
+  // };
 
   const handleSubmitForm = async (e) => {
     e.preventDefault();
@@ -57,6 +53,7 @@ function UploadPatterns() {
         <input
           className="upload-pattern__name"
           onChange={handlePatternTitleChange}
+          required
         ></input>
       </div>
       <div className="upload-pattern__label-body">
@@ -66,6 +63,7 @@ function UploadPatterns() {
         <input
           className="upload-pattern__body"
           onChange={handlePatternBodyChange}
+          required
         ></input>
       </div>
       <div className="upload-pattern__label-image">
@@ -75,10 +73,11 @@ function UploadPatterns() {
         >
           pattern image
         </label>
+
         <input
           type="file"
           className="upload-pattern__attach"
-          onChange={handlePatternImageChange}
+          onChange={handleFileChange}
         ></input>
       </div>
 
