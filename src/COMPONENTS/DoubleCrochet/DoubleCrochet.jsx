@@ -1,5 +1,4 @@
 import "../DoubleCrochet/DoubleCrochet.scss";
-import placeholder from "../../assets/images/crochet-image-placeholder.jpg";
 import double2 from "../../assets/images/double/double-2.jpg";
 import double3 from "../../assets/images/double/double-3.jpg";
 import double4 from "../../assets/images/double/double-4.jpg";
@@ -18,7 +17,7 @@ function DoubleCrochet() {
   return (
     <section className="double">
       <h2 className="double__title">Double Crochet</h2>
-      <div className="double__slipknot-1">
+      <div className="double__set-1">
         <p className="double__text">
           Continuing forward, we will build on the previous row of single
           crochets. Considering that a double crochet will be "taller" than a
@@ -27,7 +26,7 @@ function DoubleCrochet() {
           foundation chain, we would start on the third chain from the hook.
           <span className="double__span"></span>
         </p>
-        <div className="double__multiple-images">
+        <div className="double__set-1-multiple-images">
           <img
             src={double2}
             alt="placeholder"
