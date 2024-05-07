@@ -23,13 +23,16 @@
       background-color: $dark-purple;
     }
   }
-  &__instagram {
+  &__item {
     margin: 0.5rem;
     width: 12rem;
     background-color: $plum;
     border-color: $plum;
     border: none;
     color: white;
+    text-align: center;
+    padding-top: 0.5rem;
+    text-decoration: none;
     font-family: "Quicksand";
     font-weight: 400;
     font-size: 1.5rem;

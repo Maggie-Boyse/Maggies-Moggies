@@ -4,9 +4,22 @@ import "../Footer/Footer.scss";
 function Footer() {
   return (
     <footer className="footer">
-      <button className="footer__contact">Contact</button>
-      <button className="footer__instagram">Instagram</button>
-      <button className="footer__ravelry">Ravelry</button>
+      <a
+        className="footer__item"
+        href="https://www.instagram.com/maggiesmoggies/"
+        target="_blank"
+        rel="noopener"
+      >
+        Instagram
+      </a>
+      <a
+        className="footer__item"
+        href="https://www.ravelry.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        Ravelry
+      </a>
     </footer>
   );
 }
