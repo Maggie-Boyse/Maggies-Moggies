@@ -1,0 +1,63 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+
+.footer {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  &__contact {
+    margin: 0.5rem;
+    width: 12rem;
+    background-color: $plum;
+    border-color: $plum;
+    border: none;
+    color: white;
+    font-family: "Quicksand";
+    font-weight: 400;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    height: 2.5rem;
+    box-shadow: 5px 5px 5px $dark-purple;
+    &:hover {
+      background-color: $dark-purple;
+    }
+  }
+  &__item {
+    margin: 0.5rem;
+    width: 12rem;
+    background-color: $plum;
+    border-color: $plum;
+    border: none;
+    color: white;
+    text-align: center;
+    padding-top: 0.5rem;
+    text-decoration: none;
+    font-family: "Quicksand";
+    font-weight: 400;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    height: 2.5rem;
+    box-shadow: 5px 5px 5px $dark-purple;
+    &:hover {
+      background-color: $dark-purple;
+    }
+  }
+  &__ravelry {
+    margin: 0.5rem;
+    width: 12rem;
+    background-color: $plum;
+    border-color: $plum;
+    border: none;
+    color: white;
+    font-family: "Quicksand";
+    font-weight: 400;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    height: 2.5rem;
+    box-shadow: 5px 5px 5px $dark-purple;
+    &:hover {
+      background-color: $dark-purple;
+    }
+  }
+}

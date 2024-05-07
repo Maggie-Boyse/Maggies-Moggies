@@ -1,0 +1,30 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+
+.navbar {
+  font-family: "Quicksand";
+  background-image: linear-gradient($plum, $light-purple);
+  outline: 0;
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    padding: 0.5rem 0.5rem 0rem 0.5rem;
+    position: relative;
+    bottom: 1rem;
+  }
+  &__item {
+    text-decoration: none;
+    color: black;
+    width: 15.5rem;
+    margin: 0rem 0.5rem 0rem 2rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    background-color: $lilac;
+    box-shadow: 5px 5px 5px $dark-purple;
+  }
+}

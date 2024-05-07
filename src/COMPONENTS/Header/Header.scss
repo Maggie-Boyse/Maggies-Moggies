@@ -1,0 +1,86 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-image: linear-gradient($light-purple, $plum);
+  &__logo-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &__logo {
+    width: 8rem;
+    height: 8rem;
+    padding: 0.5rem;
+  }
+  &__title {
+    font-family: "Quicksand";
+    font-size: 5rem;
+    color: $dark-purple;
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
+  }
+  &__signs {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  &__sign-in {
+    margin: 0.5rem;
+    width: 12rem;
+    background-color: $plum;
+    border-color: $plum;
+    border: none;
+    color: white;
+    font-family: "Quicksand";
+    font-weight: 400;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    height: 2.5rem;
+    box-shadow: 5px 5px 5px $dark-purple;
+    &:hover {
+      background-color: $dark-purple;
+    }
+  }
+  &__sign-up {
+    margin: 0.5rem;
+    width: 12rem;
+    background-color: $plum;
+    border-color: $plum;
+    border: none;
+    color: white;
+    font-family: "Quicksand";
+    font-weight: 400;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    height: 2.5rem;
+    box-shadow: 5px 5px 5px $dark-purple;
+    &:hover {
+      background-color: $dark-purple;
+    }
+  }
+}
+
+.user-header {
+  &__user {
+    margin: 1rem;
+    width: 12rem;
+    background-color: $lilac;
+    color: white;
+    font-family: "Quicksand";
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 1rem;
+    border-radius: 10px;
+    height: 5rem;
+    box-shadow: 5px 5px 5px $dark-purple;
+  }
+  &__span {
+    font-weight: 700;
+  }
+}

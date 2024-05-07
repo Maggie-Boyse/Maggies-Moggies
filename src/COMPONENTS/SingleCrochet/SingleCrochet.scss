@@ -1,0 +1,52 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+
+.single {
+  font-family: "Quicksand";
+  &__span {
+    font-weight: 700;
+  }
+  &__title {
+    font-size: 3rem;
+    color: $dark-purple;
+    margin-left: 2rem;
+  }
+  &__set-1 {
+    display: flex;
+    flex-direction: column;
+  }
+  &__text {
+    font-size: 2rem;
+    margin: 2rem;
+  }
+  &__image {
+    width: 50%;
+    margin: 2rem;
+    border-radius: 10px;
+  }
+  &__set-1-multiple-images {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  &__image-multi {
+    width: 75%;
+    margin: 2rem;
+    border-radius: 10px;
+  }
+  &__slipknot-2 {
+    display: flex;
+    flex-direction: row;
+    background-color: $light-purple;
+  }
+  &__single__set-3 {
+    display: flex;
+    flex-direction: column;
+    background-color: $lilac;
+  }
+  &__slipknot-4 {
+    display: flex;
+    flex-direction: row;
+    background-color: $medium-purple;
+  }
+}
