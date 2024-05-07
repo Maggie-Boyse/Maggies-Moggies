@@ -1,5 +1,4 @@
 import "../DoubleCrochet/DoubleCrochet.scss";
-import placeholder from "../../assets/images/crochet-image-placeholder.jpg";
 import double2 from "../../assets/images/double/double-2.jpg";
 import double3 from "../../assets/images/double/double-3.jpg";
 import double4 from "../../assets/images/double/double-4.jpg";

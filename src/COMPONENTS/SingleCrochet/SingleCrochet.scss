@@ -11,9 +11,9 @@
     color: $dark-purple;
     margin-left: 2rem;
   }
-  &__slipknot-1 {
+  &__set-1 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
   &__text {
     font-size: 2rem;
@@ -24,9 +24,10 @@
     margin: 2rem;
     border-radius: 10px;
   }
-  &__multiple-images {
+  &__set-1-multiple-images {
     display: flex;
     flex-direction: column;
+    align-content: center;
   }
   &__image-multi {
     width: 75%;

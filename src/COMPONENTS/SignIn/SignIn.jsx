@@ -37,7 +37,6 @@ const SignIn = () => {
         localStorage.setItem("user_id", loginRes.data.user_id);
         console.log(loginRes.data);
         setShowModal(true);
-        e.target.reset();
       }
     } catch (error) {
       setShowErrorModal(true);
