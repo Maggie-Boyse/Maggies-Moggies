@@ -41,7 +41,7 @@ function UploadPatterns() {
     <form className="upload-pattern" onSubmit={handleSubmitForm}>
       <div className="upload-pattern__label-name">
         <label className="upload-pattern__label" htmlFor="upload-pattern__name">
-          pattern name
+          pattern name*:
         </label>
         <input
           className="upload-pattern__name"
@@ -51,7 +51,7 @@ function UploadPatterns() {
       </div>
       <div className="upload-pattern__label-body">
         <label className="upload-pattern__label" htmlFor="upload-pattern__body">
-          pattern text
+          pattern text*:
         </label>
         <input
           className="upload-pattern__body"
@@ -64,7 +64,7 @@ function UploadPatterns() {
           className="upload-pattern__label"
           htmlFor="upload-pattern__attach"
         >
-          pattern image
+          pattern image:
         </label>
 
         <input
