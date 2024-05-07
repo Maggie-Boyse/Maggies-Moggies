@@ -7,7 +7,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background-image: linear-gradient($light-purple, $plum);
+  background-color: $light-purple;
+  // background-image: linear-gradient($light-purple, $plum);
   &__logo-title {
     display: flex;
     flex-direction: row;
@@ -21,6 +22,7 @@
   &__title {
     font-family: "Quicksand";
     font-size: 5rem;
+    font-weight: 400;
     color: $dark-purple;
     margin: 0.5rem 0.5rem 1rem 0.5rem;
   }
