@@ -1,5 +1,4 @@
 import "../DoubleCrochet/DoubleCrochet.scss";
-import placeholder from "../../assets/images/crochet-image-placeholder.jpg";
 import double2 from "../../assets/images/double/double-2.jpg";
 import double3 from "../../assets/images/double/double-3.jpg";
 import double4 from "../../assets/images/double/double-4.jpg";
@@ -28,11 +27,7 @@ function DoubleCrochet() {
           <span className="double__span"></span>
         </p>
         <div className="double__multiple-images">
-          <img
-            src={double2}
-            alt="placeholder"
-            className="double__image-multi"
-          />
+
           <img
             src={double3}
             alt="placeholder"

@@ -1,32 +1,55 @@
-import "./PatternBuilder.scss";
 import React from "react";
-import { DndContext } from "@dnd-kit/core";
+import { useDraggable } from "@dnd-kit/core";
+// import singlecrochet from "../../assets/icons/single-crochet.png";
 
-function PatternBuilder() {
-  const [gridSize, setGridSize] = React.useState(30);
-  const style = {
-    alignItems: "flex-start",
-  };
-  const buttonStyle = {
-    marginLeft: gridSize - 20 + 1,
-    marginTop: gridSize - 20 + 1,
-    width: gridSize * 8 - 1,
-    height: gridSize * 2 - 1,
-  };
-  const snapToGrid = useMemo(() => createSnapModifier(gridSize), [gridSize]);
+const CustomStyle = {
+  display: "flex",
+  width: "140px",
+  height: "140px",
+  backgroundColor: "#e8e8a2",
+};
+
+export function Draggable({ id, content, styles }) {
+  const { attributes, listeners, setNodeRef, transform } = useDraggable({
+    id,
+  });
+
+  const style = transform
+    ? {
+        transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
+      }
+    : {};
 
   return (
-    <>
-      <DraggableStory
-        label={`Snapping to ${gridSize}px increments`}
-        modifiers={[snapToGrid]}
-        style={style}
-        buttonStyle={buttonStyle}
-        key={gridSize}
-      />
-      <Grid size={gridSize} onSizeChange={setGridSize} />
-    </>
+    <div
+      ref={setNodeRef}
+      style={{ ...style, ...CustomStyle, ...styles }}
+      {...listeners}
+      {...attributes}
+    >
+      {content}
+    </div>
   );
 }
 
-export default PatternBuilder;
+// import React from "react";
+// import { useDraggable } from "@dnd-kit/core";
+
+// function Draggable(props) {
+//   const { attributes, listeners, setNodeRef, transform } = useDraggable({
+//     id: "draggable",
+//   });
+//   const style = transform
+//     ? {
+//         transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
+//       }
+//     : undefined;
+
+//   return (
+//     <button ref={setNodeRef} style={style} {...listeners} {...attributes}>
+//       {props.children}
+//     </button>
+//   );
+// }
+
+// export default Draggable;
