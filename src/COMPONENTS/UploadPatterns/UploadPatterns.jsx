@@ -34,7 +34,7 @@ function UploadPatterns() {
         const newPattern = {
           pattern_title: patternTitle,
           pattern_body: patternBody,
-          pattern_image: patternImage,
+          // pattern_image: patternImage,
           user_id: userId,
         };
         await axios.post(`${API_URL}/patterns`, newPattern);

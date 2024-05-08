@@ -3,13 +3,15 @@
 
 .learn-navbar {
   font-family: "Quicksand";
-  background-image: linear-gradient(white, $plum);
-
+  padding-top: 2rem;
+  background-image: linear-gradient($plum, white);
+  position: relative;
+  bottom: 1rem;
   &__list {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
   &__item {
     display: flex;
