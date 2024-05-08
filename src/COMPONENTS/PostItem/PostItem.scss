@@ -4,14 +4,17 @@
 .post {
   font-family: "Quicksand";
   &__item {
-    width: 15rem;
+    width: 20rem;
     padding: 1rem;
     margin: 2rem;
     background-color: $light-purple;
     border-radius: 10px;
   }
   &__username {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: $dark-purple;
+  }
+  &__body {
+    font-size: 1.5rem;
   }
 }

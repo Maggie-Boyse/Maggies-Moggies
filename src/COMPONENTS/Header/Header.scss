@@ -7,7 +7,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0rem 1rem;
   background-color: $light-purple;
   // background-image: linear-gradient($light-purple, $plum);
   &__logo-title {
@@ -30,7 +30,7 @@
   &__signs {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1rem 2rem;
   }
   &__sign-in {
     display: flex;

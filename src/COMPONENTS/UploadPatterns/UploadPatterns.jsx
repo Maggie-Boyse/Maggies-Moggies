@@ -6,7 +6,7 @@ import { API_URL } from "../../utils/api";
 function UploadPatterns() {
   const [patternTitle, setPatternTitle] = useState("");
   const [patternBody, setPatternBody] = useState("");
-  const [patternImage, setPatternImage] = useState("");
+  // const [patternImage, setPatternImage] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [showErrorModal, setShowErrorModal] = useState(false);
 
@@ -16,11 +16,11 @@ function UploadPatterns() {
   const handlePatternBodyChange = (e) => {
     setPatternBody(e.target.value);
   };
-  const handleFileChange = (e) => {
-    if (e.target.files) {
-      setPatternImage(e.target.files[0]);
-    }
-  };
+  // const handleFileChange = (e) => {
+  //   if (e.target.files) {
+  //     setPatternImage(e.target.files[0]);
+  //   }
+  // };
 
   const handleSubmitForm = async (e) => {
     e.preventDefault();
@@ -73,7 +73,8 @@ function UploadPatterns() {
           required
         ></textarea>
       </div>
-      <div className="upload-pattern__label-image">
+
+      {/* <div className="upload-pattern__label-image">
         <label
           className="upload-pattern__label"
           htmlFor="upload-pattern__attach"
@@ -86,7 +87,7 @@ function UploadPatterns() {
           className="upload-pattern__attach"
           onChange={handleFileChange}
         ></input>
-      </div>
+      </div> */}
 
       <button className="upload-pattern__button" type="submit">
         upload
