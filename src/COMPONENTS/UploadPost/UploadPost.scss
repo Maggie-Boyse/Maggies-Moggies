@@ -110,4 +110,22 @@
       background-color: $dark-purple;
     }
   }
+  &__modal-close {
+    margin: 0.5rem;
+    width: 12rem;
+    height: 3.4rem;
+    background-color: $plum;
+    border-color: $plum;
+    border: none;
+    color: white;
+    font-family: "Quicksand";
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px $dark-purple;
+    &:hover {
+      background-color: $dark-purple;
+    }
+  }
 }

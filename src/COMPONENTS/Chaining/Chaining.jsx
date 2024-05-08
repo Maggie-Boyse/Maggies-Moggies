@@ -24,19 +24,23 @@ function Chaining() {
         <div className="chaining__set-1-mulitple-images">
           <img
             src={chain1}
-            alt="chaining image"
+            alt="chaining demonstration"
             className="chaining__image-multi"
           />
           <img
             src={chain2}
-            alt="chaining image"
+            alt="chaining demonstration"
             className="chaining__image-multi"
           />
         </div>
       </div>
 
       <div className="chaining__chaining-2">
-        <img src={chain3} alt="chaining image" className="chaining__image" />
+        <img
+          src={chain3}
+          alt="chaining demonstration"
+          className="chaining__image"
+        />
         <p className="chaining__text">
           Then, catch your trailing yarn, and pull it back{" "}
           <span className="chaining__span">through</span> the loop you made,
@@ -53,19 +57,23 @@ function Chaining() {
         <div className="chaining__set-3-mulitple-images">
           <img
             src={chain4}
-            alt="placeholder"
+            alt="chaining demonstration"
             className="chaining__image-multi"
           />
           <img
             src={chain5}
-            alt="placeholder"
+            alt="chaining demonstration"
             className="chaining__image-multi"
           />
         </div>
       </div>
 
       <div className="chaining__chaining-4">
-        <img src={chain6} alt="placeholder" className="chaining__image" />
+        <img
+          src={chain6}
+          alt="chaining demonstration"
+          className="chaining__image"
+        />
         <p className="chaining__text">
           Repeat until desired length of project!
         </p>

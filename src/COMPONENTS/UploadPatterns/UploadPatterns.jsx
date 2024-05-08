@@ -8,6 +8,7 @@ function UploadPatterns() {
   const [patternBody, setPatternBody] = useState("");
   const [patternImage, setPatternImage] = useState("");
   const [showModal, setShowModal] = useState(false);
+  const [showErrorModal, setShowErrorModal] = useState(false);
 
   const handlePatternTitleChange = (e) => {
     setPatternTitle(e.target.value);
@@ -23,18 +24,31 @@ function UploadPatterns() {
 
   const handleSubmitForm = async (e) => {
     e.preventDefault();
-    const newPattern = {
-      pattern_title: patternTitle,
-      pattern_body: patternBody,
-      pattern_image: patternImage,
-    };
-    await axios.post(`${API_URL}/patterns`, newPattern);
-    setShowModal(true);
+    const username = localStorage.getItem("username");
+    const userId = localStorage.getItem("user_id");
+    if (username === null) {
+      setShowErrorModal(true);
+      return;
+    } else {
+      try {
+        const newPattern = {
+          pattern_title: patternTitle,
+          pattern_body: patternBody,
+          pattern_image: patternImage,
+          user_id: userId,
+        };
+        await axios.post(`${API_URL}/patterns`, newPattern);
+        setShowModal(true);
+      } catch (error) {
+        console.log(error, "Cannot post right now");
+      }
+    }
   };
 
   const closeModal = (e) => {
     e.preventDefault();
     setShowModal(false);
+    setShowErrorModal(false);
   };
 
   return (
@@ -81,6 +95,7 @@ function UploadPatterns() {
       {showModal && (
         <div className="upload-pattern__modal">
           <div className="upload-pattern__modal-content">
+            <p className="upload-pattern__modal-text">Upload Successful!</p>
             <button
               onClick={closeModal}
               className="upload-pattern__modal-close"
@@ -88,7 +103,23 @@ function UploadPatterns() {
               {" "}
               close{" "}
             </button>
-            <p>Upload Successful!</p>
+          </div>
+        </div>
+      )}
+
+      {showErrorModal && (
+        <div className="upload-post__modal">
+          <div className="upload-pattern__modal-content">
+            <p className="upload-pattern__modal-text">
+              Please log in to post a comment!
+            </p>
+            <button
+              onClick={closeModal}
+              className="upload-pattern__modal-close"
+            >
+              {" "}
+              close{" "}
+            </button>
           </div>
         </div>
       )}

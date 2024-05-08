@@ -84,8 +84,8 @@ const SignIn = () => {
       {showModal && (
         <div className="signin-form__modal">
           <div className="signin-form__modal-content">
-            <p>Sign in Successful!</p>
-            <p> Welcome {username}!</p>
+            <p className="signin-form__modal-text">Sign in Successful!</p>
+            <p className="signin-form__modal-text"> Welcome {username}!</p>
             <button onClick={closeModal} className="signin-form__modal-close">
               {" "}
               close{" "}
@@ -96,7 +96,7 @@ const SignIn = () => {
       {showErrorModal && (
         <div className="signup-form__modal">
           <div className="signup-form__modal-content">
-            <p>
+            <p className="signin-form__modal-text">
               Please fill out all required fields, ensure password and username
               are correct!
             </p>
