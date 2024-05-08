@@ -21,16 +21,16 @@ function Chaining() {
             Pictured is my preferred method.
           </span>
         </p>
-        <div className="chaining__set-1-mulitple-images">
+        <div className="chaining__images">
           <img
             src={chain1}
             alt="chaining demonstration"
-            className="chaining__image-multi"
+            className="chaining__image"
           />
           <img
             src={chain2}
             alt="chaining demonstration"
-            className="chaining__image-multi"
+            className="chaining__image"
           />
         </div>
       </div>
@@ -48,22 +48,22 @@ function Chaining() {
         </p>
       </div>
 
-      <div className="chaining__chaining-set-3">
+      <div className="chaining__chaining-3">
         <p className="chaining__text">
           Now, keeping our hook snug inside the loop, we'll grasp the knot
           between finger and thumb. Catch the trailing yarn once more, and pull
           through the loop.
         </p>
-        <div className="chaining__set-3-mulitple-images">
+        <div className="chaining__images">
           <img
             src={chain4}
             alt="chaining demonstration"
-            className="chaining__image-multi"
+            className="chaining__image"
           />
           <img
             src={chain5}
             alt="chaining demonstration"
-            className="chaining__image-multi"
+            className="chaining__image"
           />
         </div>
       </div>
