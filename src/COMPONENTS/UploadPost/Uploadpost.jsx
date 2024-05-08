@@ -44,11 +44,12 @@ function UploadPost() {
       <label htmlFor="upload-post__body" className="upload-post__label">
         Comment here:
       </label>
-      <input
+      <textarea
+        type="text"
         className="upload-post__body"
         onChange={handlePostBodyChange}
         required
-      ></input>
+      ></textarea>
 
       <button className="upload-post__button" type="submit">
         post

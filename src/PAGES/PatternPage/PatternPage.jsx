@@ -18,7 +18,7 @@ function PatternPage() {
       <SearchPatterns setResults={setResults} />
 
       <Link to="/upload" className="patterns__upload">
-        Upload Here{" "}
+        Upload Your Own Pattern Here{" "}
       </Link>
 
       {results.map((pattern) => (

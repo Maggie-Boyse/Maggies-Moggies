@@ -23,24 +23,22 @@ export const SearchPatterns = ({ setResults }) => {
   };
   return (
     <section className="search">
-      <div>
-        <form className="search__form">
-          <label className="search__text" htmlFor="search__input">
-            Search Maggie's Moggies for patterns!
-          </label>
-          <div className="search__input-button">
-            <input
-              className="search__input"
-              placeholder="Try, 'dish sponge'"
-              value={input}
-              onChange={(e) => handleChange(e.target.value)}
-            ></input>
-            <button className="search__button" onClick={handleSearch}>
-              search
-            </button>
-          </div>
-        </form>
-      </div>
+      <form className="search__form">
+        <label className="search__text" htmlFor="search__input">
+          Search Maggie's Moggies for patterns!
+        </label>
+        <div className="search__input-button">
+          <input
+            className="search__input"
+            placeholder="Try, 'dish sponge'"
+            value={input}
+            onChange={(e) => handleChange(e.target.value)}
+          ></input>
+          <button className="search__button" onClick={handleSearch}>
+            search
+          </button>
+        </div>
+      </form>
     </section>
   );
 };

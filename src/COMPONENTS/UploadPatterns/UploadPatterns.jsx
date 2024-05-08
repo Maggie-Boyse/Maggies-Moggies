@@ -67,11 +67,11 @@ function UploadPatterns() {
         <label className="upload-pattern__label" htmlFor="upload-pattern__body">
           pattern text*:
         </label>
-        <input
+        <textarea
           className="upload-pattern__body"
           onChange={handlePatternBodyChange}
           required
-        ></input>
+        ></textarea>
       </div>
       <div className="upload-pattern__label-image">
         <label
