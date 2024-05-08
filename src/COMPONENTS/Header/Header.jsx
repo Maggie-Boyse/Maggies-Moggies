@@ -41,7 +41,7 @@ function Header() {
       </div>
       {userHeader ? (
         <div className="user-header">
-          <Link to="/signup" className="user-header__user">
+          <Link to="/profile" className="user-header__user">
             Welcome <span className="user-header__span">{userHeader}!</span>
           </Link>
         </div>
