@@ -6,7 +6,6 @@ import { API_URL } from "../../utils/api";
 function UploadPatterns() {
   const [patternTitle, setPatternTitle] = useState("");
   const [patternBody, setPatternBody] = useState("");
-  // const [patternImage, setPatternImage] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [showErrorModal, setShowErrorModal] = useState(false);
 
@@ -16,11 +15,6 @@ function UploadPatterns() {
   const handlePatternBodyChange = (e) => {
     setPatternBody(e.target.value);
   };
-  // const handleFileChange = (e) => {
-  //   if (e.target.files) {
-  //     setPatternImage(e.target.files[0]);
-  //   }
-  // };
 
   const handleSubmitForm = async (e) => {
     e.preventDefault();
@@ -34,7 +28,6 @@ function UploadPatterns() {
         const newPattern = {
           pattern_title: patternTitle,
           pattern_body: patternBody,
-          pattern_image: patternImage,
           user_id: userId,
         };
         await axios.post(`${API_URL}/patterns`, newPattern);
