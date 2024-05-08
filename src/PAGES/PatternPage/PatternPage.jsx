@@ -17,10 +17,6 @@ function PatternPage() {
       <h1 className="patterns__title">Search and Upload Patterns</h1>
       <SearchPatterns setResults={setResults} />
 
-      <Link to="/upload" className="patterns__upload">
-        Upload Here{" "}
-      </Link>
-
       {results.map((pattern) => (
         <PatternItem
           key={pattern.id}
@@ -28,6 +24,12 @@ function PatternPage() {
           patternToLoad={pattern.id}
         />
       ))}
+
+      <Link to="/upload" className="patterns__upload">
+        Upload Your Own Pattern Here{" "}
+      </Link>
+
+
 
       <Footer />
     </div>

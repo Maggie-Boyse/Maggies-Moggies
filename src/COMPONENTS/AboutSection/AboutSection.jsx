@@ -7,7 +7,7 @@ function AboutSection() {
       <div className="about__hero"></div>
       <p className="about__text">
         <span className="about__title-text">
-          Hello everyone, and welcome to Maggie's Moggies!
+          Hello, and welcome to Maggie's Moggies!
         </span>
         <br />
         <br />

@@ -22,6 +22,7 @@
     box-shadow: 5px 5px 5px $dark-purple;
     margin-right: 1rem;
     font-size: 1.3rem;
+    font-family: "Quicksand";
     &:focus {
       border: solid 3px;
       border-color: $medium-purple;
@@ -64,6 +65,9 @@
     border: 1px solid $medium-purple;
     border-radius: 10px;
     width: 80%;
+  }
+  &__modal-text {
+    font-size: 2rem;
   }
   &__button {
     margin: 0.5rem;

@@ -20,33 +20,28 @@
     margin: 2rem;
   }
   &__image {
-    width: 50%;
+    width: 36rem;
     margin: 2rem;
     border-radius: 10px;
   }
-  &__set-1-multiple-images {
+  &__images {
     display: flex;
-    flex-direction: column;
-    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
-  &__image-multi {
-    width: 75%;
-    margin: 2rem;
-    border-radius: 10px;
-  }
-  &__slipknot-2 {
+  &__set-2 {
     display: flex;
     flex-direction: row;
     background-color: $light-purple;
   }
-  &__single__set-3 {
+  &__set-3 {
     display: flex;
     flex-direction: column;
     background-color: $lilac;
   }
-  &__slipknot-4 {
+  &__set-4 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: $medium-purple;
   }
 }

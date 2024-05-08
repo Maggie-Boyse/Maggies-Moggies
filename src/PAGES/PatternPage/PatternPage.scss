@@ -4,21 +4,21 @@
 .patterns {
   font-family: "Quicksand";
   &__title {
-    margin: 2rem;
+    margin: 5rem 2rem 2rem 2rem;
     color: $dark-purple;
     font-size: 3rem;
   }
   &__upload {
     text-decoration: none;
-    color: white;
+    color: black;
     width: 15.5rem;
     margin: 2rem;
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: 10px;
     font-size: 1.5rem;
     font-weight: 400;
     text-align: center;
-    background-color: $medium-purple;
+    background-color: $lilac;
     box-shadow: 5px 5px 5px $dark-purple;
   }
 }

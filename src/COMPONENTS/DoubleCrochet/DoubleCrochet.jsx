@@ -26,104 +26,52 @@ function DoubleCrochet() {
           foundation chain, we would start on the third chain from the hook.
           <span className="double__span"></span>
         </p>
-        <div className="double__set-1-multiple-images">
-          <img
-            src={double2}
-            alt="placeholder"
-            className="double__image-multi"
-          />
-          <img
-            src={double3}
-            alt="placeholder"
-            className="double__image-multi"
-          />
-          <img
-            src={double4}
-            alt="placeholder"
-            className="double__image-multi"
-          />
-          <img
-            src={double5}
-            alt="placeholder"
-            className="double__image-multi"
-          />
+        <div className="double__images">
+          <img src={double2} alt="placeholder" className="double__image" />
+          <img src={double3} alt="placeholder" className="double__image" />
+          <img src={double4} alt="placeholder" className="double__image" />
+          <img src={double5} alt="placeholder" className="double__image" />
         </div>
       </div>
 
-      <div className="double__slipknot-2">
-        <div className="double__multiple-images">
-          <img
-            src={double6}
-            alt="placeholder"
-            className="double__image-multi"
-          />
-          <img
-            src={double7}
-            alt="placeholder"
-            className="double__image-multi"
-          />
-          <img
-            src={double8}
-            alt="placeholder"
-            className="double__image-multi"
-          />
-          <img
-            src={double9}
-            alt="placeholder"
-            className="double__image-multi"
-          />
-        </div>
-        <p className="double__text">
+      <div className="double__set-2">
+      <p className="double__text">
           For the stitch itself, we will start by looping our yarn over the hook
           <span className="double__span">before</span> passing through the
           stitch. The next part is the same as single crochet, grab the yarn and
           pull it through. We will now have{" "}
           <span className="double__span">three</span> loops on our hook.
         </p>
+        <div className="double__images">
+          <img src={double6} alt="placeholder" className="double__image" />
+          <img src={double7} alt="placeholder" className="double__image" />
+          <img src={double8} alt="placeholder" className="double__image" />
+          <img src={double9} alt="placeholder" className="double__image" />
+        </div>
       </div>
 
-      <div className="double__slipknot-3">
+      <div className="double__set-3">
         <p className="double__text">
           Next, grab the yarn again and pull through{" "}
           <span className="double__span">two</span> loops. There should still be
           two loops left on the hook.
         </p>
-        <div className="double__multiple-images">
-          <img
-            src={double10}
-            alt="placeholder"
-            className="double__image-multi"
-          />
-          <img
-            src={double11}
-            alt="placeholder"
-            className="double__image-multi"
-          />
+        <div className="double__images">
+          <img src={double10} alt="placeholder" className="double__image" />
+          <img src={double11} alt="placeholder" className="double__image" />
         </div>
       </div>
 
-      <div className="double__slipknot-4">
-        <div className="double__multiple-images">
-          <img
-            src={double12}
-            alt="placeholder"
-            className="double__image-multi"
-          />
-          <img
-            src={double13}
-            alt="placeholder"
-            className="double__image-multi"
-          />
-          <img
-            src={double14}
-            alt="placeholder"
-            className="double__image-multi"
-          />
-        </div>
+      <div className="double__set-4">
         <p className="double__text">
           Repeat the last step once more - grabbing the yarn and pulling through
           two loops. That's a double crochet!
         </p>
+        <div className="double__images">
+          <img src={double12} alt="placeholder" className="double__image" />
+          <img src={double13} alt="placeholder" className="double__image" />
+          <img src={double14} alt="placeholder" className="double__image" />
+        </div>
       </div>
     </section>
   );
