@@ -32,38 +32,36 @@
     padding: 2rem;
   }
   &__sign-in {
-    margin: 0.5rem;
-    width: 12rem;
-    background-color: $plum;
-    border-color: $plum;
-    border: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
     color: white;
-    font-family: "Quicksand";
-    font-weight: 400;
-    font-size: 1.5rem;
+    width: 15.5rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
     border-radius: 10px;
-    height: 2.5rem;
+    font-size: 2rem;
+    font-weight: 400;
+    background-color: $medium-purple;
     box-shadow: 5px 5px 5px $dark-purple;
-    &:hover {
-      background-color: $dark-purple;
-    }
   }
   &__sign-up {
-    margin: 0.5rem;
-    width: 12rem;
-    background-color: $plum;
-    border-color: $plum;
-    border: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
     color: white;
-    font-family: "Quicksand";
-    font-weight: 400;
-    font-size: 1.5rem;
+    width: 15.5rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
     border-radius: 10px;
-    height: 2.5rem;
+    font-size: 2rem;
+    font-weight: 400;
+    background-color: $medium-purple;
     box-shadow: 5px 5px 5px $dark-purple;
-    &:hover {
-      background-color: $dark-purple;
-    }
   }
 }
 
