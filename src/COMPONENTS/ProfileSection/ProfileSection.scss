@@ -1,0 +1,122 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+
+.profile-section {
+  font-family: "Quicksand";
+  &__title {
+    font-size: 3rem;
+    color: $dark-purple;
+    padding: 2rem;
+  }
+  &__delete {
+    margin-top: 3rem;
+    width: 15rem;
+    height: 3.4rem;
+    background-color: $lilac;
+    border-color: $lilac;
+    border: none;
+    color: black;
+    font-family: "Quicksand";
+    font-weight: 500;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px $dark-purple;
+    &:hover {
+      background-color: $medium-purple;
+    }
+  }
+  &__toggle {
+    margin-top: 3rem;
+    width: 15rem;
+    height: 3.4rem;
+    background-color: $lilac;
+    border-color: $lilac;
+    border: none;
+    color: black;
+    font-family: "Quicksand";
+    font-weight: 500;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px $dark-purple;
+    margin: 1rem;
+    &:hover {
+      background-color: $medium-purple;
+    }
+  }
+  &__modal-close {
+    margin: 0.5rem;
+    width: 12rem;
+    height: 2rem;
+    background-color: $plum;
+    border-color: $plum;
+    border: none;
+    color: white;
+    font-family: "Quicksand";
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px $dark-purple;
+    &:hover {
+      background-color: $dark-purple;
+    }
+  }
+  &__modal-delete {
+    margin: 0.5rem;
+    width: 12rem;
+    height: 2rem;
+    background-color: $plum;
+    border-color: $plum;
+    border: none;
+    color: white;
+    font-family: "Quicksand";
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px $dark-purple;
+    &:hover {
+      background-color: $dark-purple;
+    }
+  }
+  &__modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $light-purple;
+    background-color: #5c125656;
+  }
+  &__modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid $medium-purple;
+    border-radius: 10px;
+    width: 80%;
+  }
+  &__modal-text {
+    font-size: 2rem;
+  }
+  &__button {
+    margin: 0.5rem;
+    width: 12rem;
+    height: 3.4rem;
+    background-color: $plum;
+    border-color: $plum;
+    border: none;
+    color: white;
+    font-family: "Quicksand";
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px $dark-purple;
+    &:hover {
+      background-color: $dark-purple;
+    }
+  }
+}
