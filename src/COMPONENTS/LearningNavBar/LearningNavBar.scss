@@ -3,22 +3,30 @@
 
 .learn-navbar {
   font-family: "Quicksand";
+  background-image: linear-gradient(white, $plum);
+
   &__list {
     list-style: none;
     display: flex;
     justify-content: center;
+    margin-top: 3rem;
   }
   &__item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     text-decoration: none;
     color: white;
     width: 15.5rem;
+    height: 3rem;
     margin: 2rem 0.5rem;
     padding: 0.5rem;
     border-radius: 10px;
     font-size: 1.5rem;
     font-weight: 400;
     text-align: center;
-    background-color: $dark-purple;
-    box-shadow: 5px 5px 5px black;
+    background-color: $medium-purple;
+    box-shadow: 5px 5px 5px $dark-purple;
   }
 }
