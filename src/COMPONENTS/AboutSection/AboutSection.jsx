@@ -1,5 +1,4 @@
 import "../AboutSection/AboutSection.scss";
-// import placeholder from "../../assets/images/crochet-image-placeholder.jpg";
 
 function AboutSection() {
   return (
@@ -36,5 +35,3 @@ function AboutSection() {
 }
 
 export default AboutSection;
-
-// No data uploaded/given to Maggie's Moggies will be sold elsewhere.

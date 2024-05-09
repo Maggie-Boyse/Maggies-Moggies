@@ -7,9 +7,10 @@ import Footer from "../../COMPONENTS/Footer/Footer";
 
 function CommunityBoard() {
   return (
-    <div>
+    <div className="board">
       <Header />
       <NavBar />
+      <h2 className="board__title">Posts From Our Community!</h2>
       <CommBoard />
       <UploadPost />
       <Footer />

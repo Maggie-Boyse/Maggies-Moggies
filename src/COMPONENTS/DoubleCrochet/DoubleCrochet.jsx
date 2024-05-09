@@ -35,8 +35,8 @@ function DoubleCrochet() {
       </div>
 
       <div className="double__set-2">
-      <p className="double__text">
-          For the stitch itself, we will start by looping our yarn over the hook
+        <p className="double__text">
+          For the stitch itself, we will start by looping our yarn over the hook{" "}
           <span className="double__span">before</span> passing through the
           stitch. The next part is the same as single crochet, grab the yarn and
           pull it through. We will now have{" "}

@@ -34,6 +34,7 @@ function SignUp() {
       if (signupRes.status === 200) {
         localStorage.setItem("authToken", signupRes.data.token);
         localStorage.setItem("username", signupRes.data.username);
+        localStorage.setItem("userId", signupRes.data.id);
         setShowModal(true);
       }
     } catch (error) {
@@ -102,7 +103,9 @@ function SignUp() {
       {showErrorModal && (
         <div className="signup-form__modal">
           <div className="signup-form__modal-content">
-            <p className="signup-form__modal-text">Please fill out all required fields!</p>
+            <p className="signup-form__modal-text">
+              Please fill out all required fields!
+            </p>
             <button onClick={closeModal} className="signup-form__modal-close">
               {" "}
               close{" "}
