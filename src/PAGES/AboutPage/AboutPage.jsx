@@ -18,6 +18,7 @@ function SignUpPage() {
           src={yarnball}
           className="about-page__yarnball"
           target="_blank"
+          alt="secret yarnball"
           // rel="noopener"
           rel="noreferrer"
         />
