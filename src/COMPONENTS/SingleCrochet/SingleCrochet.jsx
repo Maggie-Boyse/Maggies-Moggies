@@ -20,21 +20,13 @@ function SingleCrochet() {
           Make sure you're on the front of the chain! For a single crochet, we
           will start by inserting our hook into the second chain from the hook.
         </p>
-        <div className="single__set-1-multiple-images">
-          <img
-            src={chain6}
-            alt="foundation chain"
-            className="single__image-multi"
-          />
-          <img
-            src={single1}
-            alt="placeholder"
-            className="single__image-multi"
-          />
+        <div className="single__images">
+          <img src={chain6} alt="foundation chain" className="single__image" />
+          <img src={single1} alt="placeholder" className="single__image" />
         </div>
       </div>
 
-      <div className="single__slipknot-2">
+      <div className="single__set-2">
         <img src={single2} alt="placeholder" className="single__image" />
         <p className="single__text">
           Next, we will grab our yarn, and pull back through the same stitch we
@@ -43,43 +35,18 @@ function SingleCrochet() {
         </p>
       </div>
 
-      <div className="single__single__set-3">
+      <div className="single__set-3">
         <p className="single__text">
           Now, grab the trailing yarn once more, and pull through both loops.
           That's a single crochet!
         </p>
-        <div className="single__set-3-multiple-images">
-          <img
-            src={single3}
-            alt="placeholder"
-            className="single__image-multi"
-          />
-          <img
-            src={single4}
-            alt="placeholder"
-            className="single__image-multi"
-          />
+        <div className="single__images">
+          <img src={single3} alt="placeholder" className="single__image" />
+          <img src={single4} alt="placeholder" className="single__image" />
         </div>
       </div>
 
-      <div className="single__slipknot-4">
-        <div className="single__multiple-images">
-          <img
-            src={single5}
-            alt="placeholder"
-            className="single__image-multi"
-          />
-          <img
-            src={single6}
-            alt="placeholder"
-            className="single__image-multi"
-          />
-          <img
-            src={double1}
-            alt="placeholder"
-            className="single__image-multi"
-          />
-        </div>
+      <div className="single__set-4">
         <p className="single__text">
           We'll continue this pattern all down the row. But now what? Back to
           chaining! We'll "chain one" - this is called a turning chain, and the{" "}
@@ -88,6 +55,11 @@ function SingleCrochet() {
           of a "V" shape. From now on, we'll insert our hook here, through the
           "V".
         </p>
+        <div className="single__images">
+          <img src={single5} alt="placeholder" className="single__image" />
+          <img src={single6} alt="placeholder" className="single__image" />
+          <img src={double1} alt="placeholder" className="single__image" />
+        </div>
       </div>
     </section>
   );

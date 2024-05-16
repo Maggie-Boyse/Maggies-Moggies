@@ -2,12 +2,14 @@
 @use "../../styles/partials/variables" as *;
 
 .header {
+  font-family: "Quicksand";
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
-  background-image: linear-gradient($light-purple, $plum);
+  padding: 0rem 1rem;
+  background-color: $light-purple;
+  // background-image: linear-gradient($light-purple, $plum);
   &__logo-title {
     display: flex;
     flex-direction: row;
@@ -21,61 +23,61 @@
   &__title {
     font-family: "Quicksand";
     font-size: 5rem;
+    font-weight: 400;
     color: $dark-purple;
     margin: 0.5rem 0.5rem 1rem 0.5rem;
   }
   &__signs {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1rem 2rem;
   }
   &__sign-in {
-    margin: 0.5rem;
-    width: 12rem;
-    background-color: $plum;
-    border-color: $plum;
-    border: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
     color: white;
-    font-family: "Quicksand";
-    font-weight: 400;
-    font-size: 1.5rem;
+    width: 15.5rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
     border-radius: 10px;
-    height: 2.5rem;
+    font-size: 2rem;
+    font-weight: 400;
+    background-color: $medium-purple;
     box-shadow: 5px 5px 5px $dark-purple;
-    &:hover {
-      background-color: $dark-purple;
-    }
   }
   &__sign-up {
-    margin: 0.5rem;
-    width: 12rem;
-    background-color: $plum;
-    border-color: $plum;
-    border: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
     color: white;
-    font-family: "Quicksand";
-    font-weight: 400;
-    font-size: 1.5rem;
+    width: 15.5rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
     border-radius: 10px;
-    height: 2.5rem;
+    font-size: 2rem;
+    font-weight: 400;
+    background-color: $medium-purple;
     box-shadow: 5px 5px 5px $dark-purple;
-    &:hover {
-      background-color: $dark-purple;
-    }
   }
 }
 
 .user-header {
   &__user {
     margin: 1rem;
-    width: 12rem;
-    background-color: $lilac;
-    color: white;
+    width: 11rem;
+    background-color: white;
+    color: $medium-purple;
     font-family: "Quicksand";
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
-    padding-top: 1rem;
+    text-decoration: none;
+    padding: 0.5rem;
     border-radius: 10px;
     height: 5rem;
     box-shadow: 5px 5px 5px $dark-purple;

@@ -21,22 +21,26 @@ function Chaining() {
             Pictured is my preferred method.
           </span>
         </p>
-        <div className="chaining__set-1-mulitple-images">
+        <div className="chaining__images">
           <img
             src={chain1}
-            alt="chaining image"
-            className="chaining__image-multi"
+            alt="chaining demonstration"
+            className="chaining__image"
           />
           <img
             src={chain2}
-            alt="chaining image"
-            className="chaining__image-multi"
+            alt="chaining demonstration"
+            className="chaining__image"
           />
         </div>
       </div>
 
       <div className="chaining__chaining-2">
-        <img src={chain3} alt="chaining image" className="chaining__image" />
+        <img
+          src={chain3}
+          alt="chaining demonstration"
+          className="chaining__image"
+        />
         <p className="chaining__text">
           Then, catch your trailing yarn, and pull it back{" "}
           <span className="chaining__span">through</span> the loop you made,
@@ -44,28 +48,32 @@ function Chaining() {
         </p>
       </div>
 
-      <div className="chaining__chaining-set-3">
+      <div className="chaining__chaining-3">
         <p className="chaining__text">
           Now, keeping our hook snug inside the loop, we'll grasp the knot
           between finger and thumb. Catch the trailing yarn once more, and pull
           through the loop.
         </p>
-        <div className="chaining__set-3-mulitple-images">
+        <div className="chaining__images">
           <img
             src={chain4}
-            alt="placeholder"
-            className="chaining__image-multi"
+            alt="chaining demonstration"
+            className="chaining__image"
           />
           <img
             src={chain5}
-            alt="placeholder"
-            className="chaining__image-multi"
+            alt="chaining demonstration"
+            className="chaining__image"
           />
         </div>
       </div>
 
       <div className="chaining__chaining-4">
-        <img src={chain6} alt="placeholder" className="chaining__image" />
+        <img
+          src={chain6}
+          alt="chaining demonstration"
+          className="chaining__image"
+        />
         <p className="chaining__text">
           Repeat until desired length of project!
         </p>

@@ -1,5 +1,4 @@
 import "../AboutSection/AboutSection.scss";
-// import placeholder from "../../assets/images/crochet-image-placeholder.jpg";
 
 function AboutSection() {
   return (
@@ -7,7 +6,7 @@ function AboutSection() {
       <div className="about__hero"></div>
       <p className="about__text">
         <span className="about__title-text">
-          Hello everyone, and welcome to Maggie's Moggies!
+          Hello, and welcome to Maggie's Moggies!
         </span>
         <br />
         <br />
@@ -36,5 +35,3 @@ function AboutSection() {
 }
 
 export default AboutSection;
-
-// No data uploaded/given to Maggie's Moggies will be sold elsewhere.

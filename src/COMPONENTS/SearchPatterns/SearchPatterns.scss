@@ -2,6 +2,10 @@
 @use "../../styles/partials/variables" as *;
 
 .search {
+  background-color: $light-purple;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 10px;
   &__text {
     font-size: 1.5rem;
   }
@@ -13,7 +17,7 @@
     align-items: center;
   }
   &__input {
-    width: 36rem;
+    width: 55rem;
     height: 3rem;
     border-radius: 10px;
     border-style: solid;
@@ -21,9 +25,10 @@
     box-shadow: 5px 5px 5px $dark-purple;
     margin-right: 1rem;
     font-size: 1.3rem;
+    font-family: "Quicksand";
     &:focus {
       border: solid 3px;
-      border-color: $medium-purple;
+      border-color: $lilac;
       outline: none;
     }
   }

@@ -1,35 +1,67 @@
 @use "../../styles/partials/global" as *;
 @use "../../styles/partials/variables" as *;
 
-.signup-form {
+.profile-section {
   font-family: "Quicksand";
-  display: flex;
-  flex-direction: column;
-  margin: 2rem;
   &__title {
-    font-size: 2rem;
+    font-size: 3rem;
     color: $dark-purple;
+    padding: 2rem;
   }
-  &__label {
-    font-size: 1.5rem;
-  }
-  &__input {
-    width: 20rem;
-    height: 3rem;
-    border-radius: 10px;
-    border-style: solid;
-    background-color: white;
-    box-shadow: 5px 5px 5px $dark-purple;
-    margin-right: 1rem;
-    font-size: 1.3rem;
+  &__delete {
+    margin-top: 3rem;
+    width: 15rem;
+    height: 3.4rem;
+    background-color: $lilac;
+    border-color: $lilac;
+    border: none;
+    color: black;
     font-family: "Quicksand";
-    &:focus {
-      border: solid 3px;
-      border-color: $medium-purple;
-      outline: none;
+    font-weight: 400;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px $dark-purple;
+    &:hover {
+      background-color: $medium-purple;
+    }
+  }
+  &__toggle {
+    margin-top: 3rem;
+    width: 15rem;
+    height: 3.4rem;
+    background-color: $lilac;
+    border-color: $lilac;
+    border: none;
+    color: black;
+    font-family: "Quicksand";
+    font-weight: 400;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px $dark-purple;
+    margin: 1rem;
+    &:hover {
+      background-color: $medium-purple;
     }
   }
   &__modal-close {
+    margin: 0.5rem;
+    width: 12rem;
+    height: 2rem;
+    background-color: $plum;
+    border-color: $plum;
+    border: none;
+    color: white;
+    font-family: "Quicksand";
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px $dark-purple;
+    &:hover {
+      background-color: $dark-purple;
+    }
+  }
+  &__modal-delete {
     margin: 0.5rem;
     width: 12rem;
     height: 2rem;

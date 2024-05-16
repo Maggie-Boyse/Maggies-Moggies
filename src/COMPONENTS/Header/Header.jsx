@@ -41,15 +41,17 @@ function Header() {
       </div>
       {userHeader ? (
         <div className="user-header">
-          <p className="user-header__user">Welcome <span className="user-header__span">{userHeader}!</span></p>
+          <Link to="/profile" className="user-header__user">
+            Welcome <span className="user-header__span">{userHeader}!</span>
+          </Link>
         </div>
       ) : (
         <div className="header__signs">
-          <Link to="/signup">
-            <button className="header__sign-in">Sign In</button>
+          <Link to="/signup" className="header__sign-in">
+            Sign In
           </Link>
-          <Link to="/signup">
-            <button className="header__sign-up">Sign Up</button>
+          <Link to="/signup" className="header__sign-up">
+            Sign Up
           </Link>
         </div>
       )}

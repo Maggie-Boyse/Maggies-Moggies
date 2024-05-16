@@ -11,41 +11,38 @@
     color: $dark-purple;
     margin-left: 2rem;
   }
-  &__slipknot-1 {
+  &__set-1 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
   &__text {
     font-size: 2rem;
     margin: 2rem;
   }
   &__image {
-    width: 50%;
+    width: 36rem;
     margin: 2rem;
     border-radius: 10px;
   }
-  &__multiple-images {
+  &__images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  &__set-2 {
     display: flex;
     flex-direction: column;
-  }
-  &__image-multi {
-    width: 75%;
-    margin: 2rem;
-    border-radius: 10px;
-  }
-  &__slipknot-2 {
-    display: flex;
-    flex-direction: row;
     background-color: $light-purple;
   }
-  &__slipknot-3 {
+  &__set-3 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: $lilac;
   }
-  &__slipknot-4 {
+  &__set-4 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    color: white;
     background-color: $medium-purple;
   }
 }

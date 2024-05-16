@@ -3,7 +3,7 @@
 
 .navbar {
   font-family: "Quicksand";
-  background-image: linear-gradient($plum, $light-purple);
+  background-image: linear-gradient($light-purple, $plum);
   outline: 0;
   &__list {
     list-style: none;
@@ -12,19 +12,33 @@
     margin-top: 0px;
     padding: 0.5rem 0.5rem 0rem 0.5rem;
     position: relative;
-    bottom: 1rem;
+    top: 2.5rem;
   }
   &__item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     text-decoration: none;
-    color: black;
-    width: 15.5rem;
+    color: white;
+    width: 18rem;
     margin: 0rem 0.5rem 0rem 2rem;
     padding: 0.5rem;
     border-radius: 10px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 400;
-    text-align: center;
-    background-color: $lilac;
+    background-color: $plum;
     box-shadow: 5px 5px 5px $dark-purple;
+    z-index: 1;
+  }
+  &__icon-left {
+    width: 1.5rem;
+    height: 3rem;
+    margin: 0.5rem 2rem 0.5rem 0.5rem;
+  }
+  &__icon-right {
+    width: 1.5rem;
+    height: 3rem;
+    margin: 0.5rem 0.5rem 0.5rem 2rem;
   }
 }

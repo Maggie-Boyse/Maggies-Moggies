@@ -5,7 +5,7 @@ import { API_URL } from "../../utils/api";
 
 function UploadPost() {
   const [postBody, setPostBody] = useState("");
-  const [postData, setPostData] = useState("");
+  // const [postData, setPostData] = useState("");
   const [showErrorModal, setShowErrorModal] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
@@ -44,11 +44,12 @@ function UploadPost() {
       <label htmlFor="upload-post__body" className="upload-post__label">
         Comment here:
       </label>
-      <input
+      <textarea
+        type="text"
         className="upload-post__body"
         onChange={handlePostBodyChange}
         required
-      ></input>
+      ></textarea>
 
       <button className="upload-post__button" type="submit">
         post
@@ -56,24 +57,28 @@ function UploadPost() {
 
       {showErrorModal && (
         <div className="upload-post__modal">
-          <p className="upload-post__modal-content">
-            Please log in to post a comment!
-          </p>
-          <button onClick={closeModal} className="upload-post__modal-close">
-            {" "}
-            close{" "}
-          </button>
+          <div className="upload-post__modal-content">
+            <p className="upload-post__modal-text">
+              Please log in to post a comment!
+            </p>
+            <button onClick={closeModal} className="upload-post__modal-close">
+              {" "}
+              close{" "}
+            </button>
+          </div>
         </div>
       )}
 
       {showModal && (
         <div className="upload-post__modal">
           <div className="upload-post__modal-content">
+            <p className="upload-post__modal-text">
+              Your comment has been posted!
+            </p>
             <button onClick={closeModal} className="upload-post__modal-close">
               {" "}
               close{" "}
             </button>
-            <p>Your comment has been posted!</p>
           </div>
         </div>
       )}
